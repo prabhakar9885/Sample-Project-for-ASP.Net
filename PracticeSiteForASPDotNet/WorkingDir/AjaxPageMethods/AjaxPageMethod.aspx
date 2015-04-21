@@ -9,18 +9,6 @@
     <script type="text/javascript">
         $(function () {
             $('#b').click(function () {
-                //                $.ajax({
-                //                    type: "POST",
-                //                    url: "Default.aspx/HelloWorld",
-                //                    data: "{}",
-                //                    contentType: "application/json",
-                //                    dataType: "json",
-                //                    success: function (msg) {
-                //                        // Replace the div's content with the page method's return.
-                //                        $("#div1").text(msg.d);
-                //                    }
-                //                });
-                //            });
                 $("#b").click(function () {
                     $.ajax({
                         type: "POST",
