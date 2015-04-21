@@ -17,9 +17,9 @@ namespace PracticeSiteForASPDotNet.WorkingDir.EmployeeServiceConsumer
         }
 
         [WebMethod]
-        public static string GetData()
+        public static string GetData(string name, int age)
         {
-            return "Hello world";
+            return "Hello " + name + " (age: " + age + ")";
         }
     }
 }
