@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticeSiteForASPDotNet", "PracticeSiteForASPDotNet\PracticeSiteForASPDotNet.csproj", "{941E433D-D36B-4D64-BDB2-E3A5DE081F91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{746FDBD4-0DD8-4FFA-A7CE-FA11923C58EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessEntities", "BusinessEntities\BusinessEntities.csproj", "{3F927A6F-901C-499A-815D-248D3714A672}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{941E433D-D36B-4D64-BDB2-E3A5DE081F91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{941E433D-D36B-4D64-BDB2-E3A5DE081F91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{941E433D-D36B-4D64-BDB2-E3A5DE081F91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{941E433D-D36B-4D64-BDB2-E3A5DE081F91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{746FDBD4-0DD8-4FFA-A7CE-FA11923C58EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{746FDBD4-0DD8-4FFA-A7CE-FA11923C58EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{746FDBD4-0DD8-4FFA-A7CE-FA11923C58EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{746FDBD4-0DD8-4FFA-A7CE-FA11923C58EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F927A6F-901C-499A-815D-248D3714A672}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F927A6F-901C-499A-815D-248D3714A672}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F927A6F-901C-499A-815D-248D3714A672}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F927A6F-901C-499A-815D-248D3714A672}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
