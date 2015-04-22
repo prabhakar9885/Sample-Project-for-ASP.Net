@@ -7,11 +7,28 @@
     <title></title>
     <script src="../../Scripts/jquery-2.1.3.js" type="text/javascript"></script>
     <script type="text/javascript">
+
+        var context = {
+                            'fun' : 0,
+                            'GetEmpInfo' : 1
+                        };
+
         //CallBack method when the page call succeeds
         function onSucceed(results, currentContext, methodName) {
-            var res = results + "\n";
-            res += methodName + "\n" + currentContext;
-            alert(res);
+            var res = "";
+            switch (currentContext) {
+                case context.fun:
+                    res = results + "</br>";
+                    res += methodName + "</br>" + currentContext;
+                    break;
+                case context.GetEmpInfo:
+                    results = JSON.parse(results);
+                    res = "<b>Id: </b>" + results.Id + "</br>";
+                    res += "<b>Name: </b>" + results.Name + "</br>";
+                    break;
+                default:
+            }
+            $("#div").html(res);
         }
 
         //CallBack method when the page call fails due to interna, server error
@@ -26,16 +43,23 @@
         }
 
         function fun() {
-            var context= 10;
-            PageMethods.GetData("Prabhu", 25, onSucceed, onError, context);
-            return false;
-        }   
+            
+            PageMethods.GetData("Prabhu", 25, onSucceed, onError, context.fun);
+            return false; // to avoid Postback
+        }
+
+        function GetEmpInfo() {
+
+            PageMethods.GetEmpInfo(onSucceed, onError, context.GetEmpInfo);
+            return false; // to avoid Postback
+        }
     </script>
 </head>
 <body>
     <form id="form1" runat="server">
     <asp:Button ID="Button1" runat="server" Text="Call Page Methods" OnClientClick="return fun()" />
-    <div>
+    <asp:Button ID="GetEmp" runat="server" Text="Get Employee Info" OnClientClick="return GetEmpInfo()" />
+    <div id="div">
     </div>
 
     <%--START: Required to Enable the access to 'PageMethods' object from Javascript--%>
