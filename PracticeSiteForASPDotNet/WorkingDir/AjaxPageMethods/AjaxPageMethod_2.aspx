@@ -9,9 +9,9 @@
     <script type="text/javascript">
 
         var context = {
-                            'fun' : 0,
-                            'GetEmpInfo' : 1
-                        };
+            'fun': 0,
+            'GetEmpInfo': 1
+        };
 
         //CallBack method when the page call succeeds
         function onSucceed(results, currentContext, methodName) {
@@ -43,7 +43,7 @@
         }
 
         function fun() {
-            
+
             PageMethods.GetData("Prabhu", 25, onSucceed, onError, context.fun);
             return false; // to avoid Postback
         }
@@ -57,16 +57,21 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <asp:Button ID="Button1" runat="server" Text="Call Page Methods" OnClientClick="return fun()" />
-    <asp:Button ID="GetEmp" runat="server" Text="Get Employee Info" OnClientClick="return GetEmpInfo()" />
-    <div id="div">
-    </div>
-
+    <fieldset style="width: 40%;">
+        <legend>Ajax calls </legend>
+        <asp:Button ID="Button1" runat="server" Text="Call Page Methods" OnClientClick="return fun()" />
+        <asp:Button ID="GetEmp" runat="server" Text="Get Employee Info" OnClientClick="return GetEmpInfo()" />
+        <br />
+        <fieldset>
+            <legend>Output</legend>
+            <div id="div">
+            </div>
+        </fieldset>
+    </fieldset>
     <%--START: Required to Enable the access to 'PageMethods' object from Javascript--%>
     <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="True">
     </asp:ScriptManager>
     <%--END: Required to Enable the access to 'PageMethods' object from Javascript--%>
-
     </form>
 </body>
 </html>
