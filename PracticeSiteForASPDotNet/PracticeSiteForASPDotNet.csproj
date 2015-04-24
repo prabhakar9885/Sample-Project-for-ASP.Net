@@ -59,6 +59,7 @@
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="Scripts\jquery-2.1.3.js" />
+    <Content Include="WorkingDir\AjaxPageMethods\AjaxFileupload.aspx" />
     <Content Include="WorkingDir\AjaxPageMethods\AjaxPageMethod_1.aspx" />
     <Content Include="WorkingDir\AjaxPageMethods\AjaxPageMethod_2.aspx" />
     <Content Include="WorkingDir\AjaxPageMethods\Default.aspx" />
@@ -146,6 +147,13 @@
     </Compile>
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="WorkingDir\AjaxPageMethods\AjaxFileupload.aspx.cs">
+      <DependentUpon>AjaxFileupload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkingDir\AjaxPageMethods\AjaxFileupload.aspx.designer.cs">
+      <DependentUpon>AjaxFileupload.aspx</DependentUpon>
     </Compile>
     <Compile Include="WorkingDir\AjaxPageMethods\AjaxPageMethod_2.aspx.cs">
       <DependentUpon>AjaxPageMethod_2.aspx</DependentUpon>
