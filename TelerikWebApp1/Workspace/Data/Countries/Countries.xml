@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Countries>
+	<Country id="1">
+		<Name>
+			India
+		</Name>
+	</Country>
+	<Country id="2">
+		<Name>
+			United States
+		</Name>
+	</Country>
+	<Country id="3">
+		<Name>
+			Instanbul
+		</Name>
+	</Country>
+	<Country id="4">
+		<Name>
+			Russia
+		</Name>
+	</Country>
+	<Country id="5">
+		<Name>
+			United Kingdom
+		</Name>
+	</Country>
+</Countries>
