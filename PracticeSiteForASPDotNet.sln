@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAcce
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessEntities", "BusinessEntities\BusinessEntities.csproj", "{3F927A6F-901C-499A-815D-248D3714A672}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelerikWebApp1", "TelerikWebApp1\TelerikWebApp1.csproj", "{9C73EC1C-9A4F-4039-8358-77EAA0E3583F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{3F927A6F-901C-499A-815D-248D3714A672}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F927A6F-901C-499A-815D-248D3714A672}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F927A6F-901C-499A-815D-248D3714A672}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C73EC1C-9A4F-4039-8358-77EAA0E3583F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C73EC1C-9A4F-4039-8358-77EAA0E3583F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C73EC1C-9A4F-4039-8358-77EAA0E3583F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C73EC1C-9A4F-4039-8358-77EAA0E3583F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
