@@ -28,6 +28,20 @@ namespace DataAccessLayer
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
                 SqlCommand cmd = new SqlCommand("GetAllEmmployees", con);
+
+                #region PROCEDURE GetAllEmmployees
+                /**
+                 *          CREATE PROCEDURE GetAllEmmployees
+                            AS
+	                            SELECT e.empno [empno], e.ename [ename], e.job [job], m.ename [ManagerName]
+	                            FROM Emp e
+	                            LEFT JOIN emp m
+	                            ON e.mgr = m.empno
+	                            ORDER BY e.empno
+                 * 
+                 */
+                #endregion
+
                 cmd.CommandType = CommandType.StoredProcedure;
                 SqlDataAdapter adpt = new SqlDataAdapter(cmd);
                 adpt.Fill(ds);
