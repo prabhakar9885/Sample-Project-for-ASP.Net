@@ -22,8 +22,10 @@
     </telerik:RadAjaxManager>
     <div>
         <telerik:RadGrid ID="RadGrid1" runat="server" GroupPanelPosition="Top" OnItemDataBound="RadGrid1_ItemDataBound"
-            PageSize="4" ResolvedRenderMode="Classic" VirtualItemCount="14" AllowCustomPaging="True"
-            OnItemCreated="RadGrid1_ItemCreated" AllowSorting="True" CellSpacing="-1" GridLines="Both">
+            PageSize="4" ResolvedRenderMode="Classic" VirtualItemCount="14" OnItemCreated="RadGrid1_ItemCreated"
+            AllowSorting="True" CellSpacing="-1" GridLines="Both" OnNeedDataSource="RadGrid1_NeedDataSource"
+            OnPageIndexChanged="RadGrid1_PageIndexChanged" OnPageSizeChanged="RadGrid1_PageSizeChanged"
+            OnSortCommand="RadGrid1_SortCommand">
             <PagerStyle EnableSEOPaging="True" PageButtonCount="2" />
             <MasterTableView AllowMultiColumnSorting="true" AutoGenerateColumns="False">
                 <Columns>
