@@ -25,7 +25,8 @@ namespace DataAccessLayer
                             {
                                 Id = row.Field<int>("empno"),
                                 Name = row.Field<string>("ename"),
-                                Job = row.Field<string>("job")
+                                Job = row.Field<string>("job"),
+                                ManagerNAme = row.Field<string>("ManagerName")
                             };
                 
                 edc.Employees = new List<Employee>();
@@ -33,8 +34,9 @@ namespace DataAccessLayer
                 {
                     Employee emp = new Employee();
                     emp.Id = item.Id;
-                    emp.Job = item.Job ?? "";
-                    emp.Name = item.Name ?? "";
+                    emp.Job = item.Job ?? "-";
+                    emp.Name = item.Name ?? "-";
+                    emp.ManagerName = item.ManagerNAme ?? "-";
                     edc.Employees.Add(emp);
                 }
             }

@@ -32,8 +32,13 @@
                         UniqueName="column">
                     </telerik:GridBoundColumn>
                     <telerik:GridBoundColumn AutoPostBackOnFilter="True" DataField="Name" 
+                        ShowFilterIcon="false"
                         FilterControlAltText="Filter column1 column" HeaderText="Name is" 
                         UniqueName="column1">
+                    </telerik:GridBoundColumn>
+                    <telerik:GridBoundColumn AutoPostBackOnFilter="True" DataField="ManagerName" 
+                        FilterControlAltText="Filter column2 column" FilterDelay="1000" 
+                        HeaderText="Manager" ShowFilterIcon="false" UniqueName="column2">
                     </telerik:GridBoundColumn>
                 </Columns>
             </MasterTableView>
