@@ -157,7 +157,10 @@
     <Content Include="Workspace\EmployeeServiceConsumer\EmployeeDetails.aspx" />
     <Content Include="Workspace\EmployeeServiceConsumer\FileUpload.aspx" />
     <Content Include="Workspace\Telerik\RadControlsDemo.aspx" />
+    <Content Include="Workspace\Telerik\RadGridDemo.aspx" />
+    <Content Include="Workspace\Telerik\RadGridDemo2.aspx" />
     <Content Include="Workspace\Telerik\TelerikControlsDemo.aspx" />
+    <Content Include="Workspace\Telerik\Webinar\PagingDemo.aspx" />
     <Content Include="Workspace\Uploads\Dell Problem.txt" />
     <Content Include="Workspace\Uploads\dreamspark.txt" />
   </ItemGroup>
@@ -299,12 +302,33 @@
     <Compile Include="Workspace\Telerik\RadControlsDemo.aspx.designer.cs">
       <DependentUpon>RadControlsDemo.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Workspace\Telerik\RadGridDemo.aspx.cs">
+      <DependentUpon>RadGridDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Workspace\Telerik\RadGridDemo.aspx.designer.cs">
+      <DependentUpon>RadGridDemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Workspace\Telerik\RadGridDemo2.aspx.cs">
+      <DependentUpon>RadGridDemo2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Workspace\Telerik\RadGridDemo2.aspx.designer.cs">
+      <DependentUpon>RadGridDemo2.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Workspace\Telerik\TelerikControlsDemo.aspx.cs">
       <DependentUpon>TelerikControlsDemo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Workspace\Telerik\TelerikControlsDemo.aspx.designer.cs">
       <DependentUpon>TelerikControlsDemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Workspace\Telerik\Webinar\PagingDemo.aspx.cs">
+      <DependentUpon>PagingDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Workspace\Telerik\Webinar\PagingDemo.aspx.designer.cs">
+      <DependentUpon>PagingDemo.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -343,10 +367,10 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Service References\DataAccessRef\" />
+    <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Properties\licenses.licx" />
+    <WCFMetadataStorage Include="Service References\DataAccessRef\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
