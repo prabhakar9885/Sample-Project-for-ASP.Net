@@ -7,6 +7,11 @@ using System.Web.UI.WebControls;
 using PracticeSiteForASPDotNet.DataAccessRef;
 using System.Data;
 
+/*
+ * Scrollable-table with Fixed-hearder: 
+ *  http://www.aspsnippets.com/Articles/Scrollable-GridView-with-Fixed-Headers-in-ASP.Net.aspx
+ */
+
 namespace PracticeSiteForASPDotNet.WorkingDir.Important
 {
     public partial class GridWithBoundFields : System.Web.UI.Page
