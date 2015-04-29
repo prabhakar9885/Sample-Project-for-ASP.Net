@@ -8,9 +8,10 @@
 //------------------------------------------------------------------------------
 
 namespace PracticeSiteForASPDotNet.WorkingDir.Important {
-    
-    
-    public partial class HomePage {
+
+
+    public partial class GridWithBoundFields
+    {
         
         /// <summary>
         /// form1 control.
