@@ -160,8 +160,6 @@
     <Content Include="Workspace\Telerik\RadGridDemo.aspx" />
     <Content Include="Workspace\Telerik\RadGridDemo2.aspx" />
     <Content Include="Workspace\Telerik\TelerikControlsDemo.aspx" />
-    <Content Include="Workspace\Telerik\Webinar\Dialog.aspx" />
-    <Content Include="Workspace\Telerik\Webinar\FilterAndPopupDemo.aspx" />
     <Content Include="Workspace\Telerik\Webinar\FilterDemo.aspx" />
     <Content Include="Workspace\Telerik\Webinar\PagingDemo.aspx" />
     <Content Include="Workspace\Uploads\Dell Problem.txt" />
@@ -325,20 +323,6 @@
     </Compile>
     <Compile Include="Workspace\Telerik\TelerikControlsDemo.aspx.designer.cs">
       <DependentUpon>TelerikControlsDemo.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Workspace\Telerik\Webinar\Dialog.aspx.cs">
-      <DependentUpon>Dialog.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Workspace\Telerik\Webinar\Dialog.aspx.designer.cs">
-      <DependentUpon>Dialog.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Workspace\Telerik\Webinar\FilterAndPopupDemo.aspx.cs">
-      <DependentUpon>FilterAndPopupDemo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Workspace\Telerik\Webinar\FilterAndPopupDemo.aspx.designer.cs">
-      <DependentUpon>FilterAndPopupDemo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Workspace\Telerik\Webinar\FilterDemo.aspx.cs">
       <DependentUpon>FilterDemo.aspx</DependentUpon>
