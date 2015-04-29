@@ -48,5 +48,21 @@ namespace DataAccessLayer
 
             return edc;
         }
+
+        public DataSet GetEmployeeDataTable()
+        {
+            EmployeeDataContract edc;
+            try
+            {
+                DAL dalObj = new DAL();
+                edc = new EmployeeDataContract();
+                DataSet ds = dalObj.GetAllEmployees();
+                return ds;
+            }
+            catch (Exception e)
+            {
+            }
+            return null;
+        }
     }
 }

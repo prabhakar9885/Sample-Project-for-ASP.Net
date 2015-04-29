@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
 using BusinessEntities;
+using System.Data;
 
 namespace DataAccessLayer
 {
@@ -20,5 +21,7 @@ namespace DataAccessLayer
     {
         [OperationContract]
         EmployeeDataContract GetEmployeeData(int value);
+        [OperationContract]
+        DataSet GetEmployeeDataTable();
     }
 }
