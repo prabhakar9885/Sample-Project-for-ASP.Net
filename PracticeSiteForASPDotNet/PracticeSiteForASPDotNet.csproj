@@ -74,6 +74,7 @@
     <Content Include="WorkingDir\AjaxPageMethods\AjaxPageMethod_2.aspx" />
     <Content Include="WorkingDir\AjaxPageMethods\Default.aspx" />
     <Content Include="WorkingDir\EmployeeServiceConsumer\FileUpload.aspx" />
+    <Content Include="WorkingDir\Important\UploadAndDisplayPDF.aspx" />
     <Content Include="WorkingDir\Important\GridWithItemTemplate.aspx" />
     <Content Include="WorkingDir\Important\GridWithBoundFields.aspx" />
     <Content Include="Styles\Site.css" />
@@ -213,6 +214,13 @@
     </Compile>
     <Compile Include="WorkingDir\EmployeeServiceConsumer\FileUpload.aspx.designer.cs">
       <DependentUpon>FileUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkingDir\Important\UploadAndDisplayPDF.aspx.cs">
+      <DependentUpon>UploadAndDisplayPDF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkingDir\Important\UploadAndDisplayPDF.aspx.designer.cs">
+      <DependentUpon>UploadAndDisplayPDF.aspx</DependentUpon>
     </Compile>
     <Compile Include="WorkingDir\Important\GridWithItemTemplate.aspx.cs">
       <DependentUpon>GridWithItemTemplate.aspx</DependentUpon>
