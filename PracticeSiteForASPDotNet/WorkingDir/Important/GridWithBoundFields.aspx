@@ -11,7 +11,7 @@
     <div>
         <table cellspacing="0" rules="all" border="1" id="Table1" style="border-collapse: collapse;">
             <tr>
-                <td style="width: 150px;">
+                <td style="width: 120px;">
                     Emp Id
                 </td>
                 <td style="width: 150px;">
@@ -32,12 +32,24 @@
             </tr>
         </table>
     </div>
-    <div style="height:200px; width:935px; overflow:scroll;">
+    <div style="height: 200px; width: 906px; overflow: scroll;">
         <asp:GridView ID="GridView1" runat="server" AllowPaging="false" ShowHeader="false"
             AutoGenerateColumns="false" PageSize="5" AllowSorting="true" OnSorting="GridView1_Sorting">
             <AlternatingRowStyle BackColor="YELLOW" />
             <Columns>
-                <asp:BoundField HeaderText="Emp Id" DataField="empno" SortExpression="empno" ItemStyle-Width="150px" />
+                <asp:TemplateField HeaderText="Emp Id" SortExpression="empno" HeaderStyle-Width="120px"
+                    ItemStyle-Width="120px">
+                    <ItemTemplate>
+                        <asp:LinkButton ID="View" runat="server">
+                            <%--CommandName="View" 
+                            CommandArgument='<%#Eval("ename") %>;<%#Eval("ManagerName") %>;<%#Eval("Salary") %>'>--%>
+                                <%#Eval("empno") %>
+                        </asp:LinkButton>
+                    </ItemTemplate>
+                </asp:TemplateField>
+            </Columns>
+            <Columns>
+                <%--<asp:BoundField HeaderText="Emp Id" DataField="empno" SortExpression="empno" ItemStyle-Width="150px" />--%>
                 <asp:BoundField HeaderText="Name" DataField="ename" SortExpression="ename" ItemStyle-Width="150px" />
                 <asp:BoundField HeaderText="Manager" DataField="ManagerName" SortExpression="ManagerName"
                     ItemStyle-Width="150px" />
