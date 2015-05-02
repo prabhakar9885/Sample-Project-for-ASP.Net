@@ -5,6 +5,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <script src="../../Scripts/jquery-2.1.3.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        function showBrowseDialog() {
+            var fileuploadctrl = document.getElementById('<%=FileUpload1.ClientID%>');
+            fileuploadctrl.click();
+            return false;
+        }
+        $(document).on('change', 'input[type="file"]', function () {
+            $(this).parents('form').submit(); //then submit its parent form
+        });
+    </script>
     <title></title>
 </head>
 <body>
@@ -41,7 +51,7 @@
     <div style="height: 200px; width: 906px; overflow: scroll;">
         <asp:GridView ID="GridView1" runat="server" AllowPaging="false" ShowHeader="false"
             AutoGenerateColumns="false" PageSize="5" AllowSorting="true" OnSorting="GridView1_Sorting"
-            OnRowCommand="GridView1_RowCommand">
+            OnRowCommand="GridView1_RowCommand" OnDataBound="GridView1_DataBound">
             <AlternatingRowStyle BackColor="YELLOW" />
             <Columns>
                 <asp:TemplateField HeaderText="Emp Id" SortExpression="empno" HeaderStyle-Width="120px"
@@ -55,16 +65,21 @@
                 <asp:BoundField HeaderText="Name" DataField="ename" SortExpression="ename" ItemStyle-Width="150px" />
                 <asp:BoundField HeaderText="Manager" DataField="ManagerName" SortExpression="ManagerName"
                     ItemStyle-Width="150px" />
-                <asp:BoundField HeaderText="Salary" DataField="Salary" SortExpression="Salary" ItemStyle-Width="150px" />
+                <asp:TemplateField HeaderText="Salary" SortExpression="Salary" ItemStyle-Width="150px">
+                    <ItemTemplate>
+                        <asp:Label runat="server" ID="Salary" Text='<%#Eval("Salary") %>'></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
                 <asp:BoundField HeaderText="Job" DataField="Job" SortExpression="Job" ItemStyle-Width="150px" />
                 <asp:TemplateField HeaderText="Action" ItemStyle-Width="150px">
                     <ItemTemplate>
-                        <asp:LinkButton ID="UploadLink" OnClick="UploadFile" runat="server">Upload</asp:LinkButton>
+                        <asp:LinkButton ID="UploadLink" OnClientClick="return showBrowseDialog();" runat="server">Upload</asp:LinkButton>
                     </ItemTemplate>
                 </asp:TemplateField>
             </Columns>
         </asp:GridView>
     </div>
+    <asp:FileUpload ID="FileUpload1" runat="server" onchange="this.form1.submit();" Style="display: none;" />
     <div>
         <div>
             <b>Id: </b><span id="SelectedId" runat="server"></span>

@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using PracticeSiteForASPDotNet.DataAccessRef;
 using System.Data;
+using System.Drawing;
 
 /*
  * Scrollable-table with Fixed-hearder: 
@@ -26,6 +27,14 @@ namespace PracticeSiteForASPDotNet.WorkingDir.Important
             {
                 GridView1.DataSource = dt;
                 GridView1.DataBind();
+            }
+
+            if (IsPostBack && FileUpload1.PostedFile != null)
+            {
+                if (FileUpload1.PostedFile.FileName.Length > 0)
+                {
+                    FileUpload1.SaveAs(Server.MapPath("~/WorkingDir/Uploads/" + FileUpload1.FileName));
+                }
             }
         }
 
@@ -60,9 +69,31 @@ namespace PracticeSiteForASPDotNet.WorkingDir.Important
             }
         }
 
-        protected void UploadFile(object sender, EventArgs e)
+
+        /**
+         *  Source: http://forums.asp.net/t/1747819.aspx?how+to+change+gridview+cell+color+based+on+cell+item
+         */
+        protected void GridView1_DataBound(object sender, EventArgs e)
         {
-            int i = 0;
+            for (int i = 0; i < GridView1.Rows.Count; i++)
+            {
+                Label l = (Label) GridView1.Rows[i].FindControl("Salary");
+                if (double.Parse(l.Text.Replace(",", "").Trim()) < 25000)
+                {
+                    GridView1.Rows[i].Cells[3].BackColor = Color.Red;
+                    l.ForeColor = Color.Lavender;
+                }
+                else if (double.Parse(l.Text.Replace(",", "").Trim()) < 35000)
+                {
+                    GridView1.Rows[i].Cells[3].BackColor = Color.Lavender;
+                }
+                else
+                {
+                    GridView1.Rows[i].Cells[3].BackColor = Color.Green;
+                    l.ForeColor = Color.White;
+                }
+            }
         }
+
     }
 }
