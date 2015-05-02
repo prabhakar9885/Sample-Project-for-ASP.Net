@@ -73,7 +73,6 @@
     <Content Include="WorkingDir\AjaxPageMethods\AjaxPageMethod_1.aspx" />
     <Content Include="WorkingDir\AjaxPageMethods\AjaxPageMethod_2.aspx" />
     <Content Include="WorkingDir\AjaxPageMethods\Default.aspx" />
-    <Content Include="WorkingDir\EmployeeServiceConsumer\FileUpload.aspx" />
     <Content Include="WorkingDir\Important\UploadAndDisplayPDF.aspx" />
     <Content Include="WorkingDir\Important\GridWithItemTemplate.aspx" />
     <Content Include="WorkingDir\Important\GridWithBoundFields.aspx" />
@@ -87,11 +86,11 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="WorkingDir\Categories\Electronics\PageInElectronicsFloder.aspx" />
+    <Content Include="WorkingDir\Categories\Electronics\ListItems.aspx" />
     <Content Include="WorkingDir\Data\Countries\Countries.xml" />
-    <Content Include="WorkingDir\EmployeeServiceConsumer\Buttons.aspx" />
-    <Content Include="WorkingDir\EmployeeServiceConsumer\DropDownList.aspx" />
-    <Content Include="WorkingDir\EmployeeServiceConsumer\EmployeeDetails.aspx" />
+    <Content Include="WorkingDir\Server Controls\Buttons.aspx" />
+    <Content Include="WorkingDir\Server Controls\DropDownList.aspx" />
+    <Content Include="WorkingDir\Server Controls\SampleDataGridAndCheckboxes.aspx" />
     <None Include="Service References\DataAccessRef\service2.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -169,12 +168,12 @@
     <Compile Include="WorkingDir\AjaxPageMethods\AjaxPageMethod_2.aspx.designer.cs">
       <DependentUpon>AjaxPageMethod_2.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WorkingDir\Categories\Electronics\PageInElectronicsFloder.aspx.cs">
-      <DependentUpon>PageInElectronicsFloder.aspx</DependentUpon>
+    <Compile Include="WorkingDir\Categories\Electronics\ListItems.aspx.cs">
+      <DependentUpon>ListItems.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WorkingDir\Categories\Electronics\PageInElectronicsFloder.aspx.designer.cs">
-      <DependentUpon>PageInElectronicsFloder.aspx</DependentUpon>
+    <Compile Include="WorkingDir\Categories\Electronics\ListItems.aspx.designer.cs">
+      <DependentUpon>ListItems.aspx</DependentUpon>
     </Compile>
     <Compile Include="WorkingDir\AjaxPageMethods\AjaxPageMethod_1.aspx.cs">
       <DependentUpon>AjaxPageMethod_1.aspx</DependentUpon>
@@ -183,37 +182,30 @@
     <Compile Include="WorkingDir\AjaxPageMethods\AjaxPageMethod_1.aspx.designer.cs">
       <DependentUpon>AjaxPageMethod_1.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WorkingDir\EmployeeServiceConsumer\Buttons.aspx.cs">
+    <Compile Include="WorkingDir\Server Controls\Buttons.aspx.cs">
       <DependentUpon>Buttons.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WorkingDir\EmployeeServiceConsumer\Buttons.aspx.designer.cs">
+    <Compile Include="WorkingDir\Server Controls\Buttons.aspx.designer.cs">
       <DependentUpon>Buttons.aspx</DependentUpon>
     </Compile>
     <Compile Include="WorkingDir\AjaxPageMethods\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WorkingDir\EmployeeServiceConsumer\DropDownList.aspx.cs">
+    <Compile Include="WorkingDir\Server Controls\DropDownList.aspx.cs">
       <DependentUpon>DropDownList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WorkingDir\EmployeeServiceConsumer\DropDownList.aspx.designer.cs">
+    <Compile Include="WorkingDir\Server Controls\DropDownList.aspx.designer.cs">
       <DependentUpon>DropDownList.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WorkingDir\EmployeeServiceConsumer\EmployeeDetails.aspx.cs">
-      <DependentUpon>EmployeeDetails.aspx</DependentUpon>
+    <Compile Include="WorkingDir\Server Controls\SampleDataGridAndCheckboxes.aspx.cs">
+      <DependentUpon>SampleDataGridAndCheckboxes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WorkingDir\EmployeeServiceConsumer\EmployeeDetails.aspx.designer.cs">
-      <DependentUpon>EmployeeDetails.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WorkingDir\EmployeeServiceConsumer\FileUpload.aspx.cs">
-      <DependentUpon>FileUpload.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WorkingDir\EmployeeServiceConsumer\FileUpload.aspx.designer.cs">
-      <DependentUpon>FileUpload.aspx</DependentUpon>
+    <Compile Include="WorkingDir\Server Controls\SampleDataGridAndCheckboxes.aspx.designer.cs">
+      <DependentUpon>SampleDataGridAndCheckboxes.aspx</DependentUpon>
     </Compile>
     <Compile Include="WorkingDir\Important\UploadAndDisplayPDF.aspx.cs">
       <DependentUpon>UploadAndDisplayPDF.aspx</DependentUpon>
