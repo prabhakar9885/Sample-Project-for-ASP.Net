@@ -11,7 +11,13 @@ namespace PracticeSiteForASPDotNet.WorkingDir.AjaxPageMethods
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (IsPostBack && FileUpload1.PostedFile != null)
+            {
+                if (FileUpload1.PostedFile.FileName.Length > 0)
+                {
+                    FileUpload1.SaveAs(Server.MapPath("~/WorkingDir/Uploads/" + FileUpload1.FileName));
+                }
+            }
         }
     }
 }
