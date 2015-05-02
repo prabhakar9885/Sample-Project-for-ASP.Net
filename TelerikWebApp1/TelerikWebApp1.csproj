@@ -160,10 +160,9 @@
     <Content Include="Workspace\Telerik\RadGridDemo.aspx" />
     <Content Include="Workspace\Telerik\RadGridDemo2.aspx" />
     <Content Include="Workspace\Telerik\TelerikControlsDemo.aspx" />
+    <Content Include="Workspace\Telerik\Webinar\Grid.aspx" />
     <Content Include="Workspace\Telerik\Webinar\FilterDemo.aspx" />
     <Content Include="Workspace\Telerik\Webinar\PagingDemo.aspx" />
-    <Content Include="Workspace\Uploads\Dell Problem.txt" />
-    <Content Include="Workspace\Uploads\dreamspark.txt" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.aspx" />
@@ -324,6 +323,13 @@
     <Compile Include="Workspace\Telerik\TelerikControlsDemo.aspx.designer.cs">
       <DependentUpon>TelerikControlsDemo.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Workspace\Telerik\Webinar\Grid.aspx.cs">
+      <DependentUpon>Grid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Workspace\Telerik\Webinar\Grid.aspx.designer.cs">
+      <DependentUpon>Grid.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Workspace\Telerik\Webinar\FilterDemo.aspx.cs">
       <DependentUpon>FilterDemo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -359,7 +365,6 @@
     <None Include="Service References\DataAccessRef\service1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Workspace\Uploads\desktop.ini" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\PracticeSiteForASPDotNet\BusinessEntities\BusinessEntities.csproj">
@@ -379,6 +384,9 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\DataAccessRef\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Workspace\Uploads\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
@@ -401,7 +409,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
+      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
