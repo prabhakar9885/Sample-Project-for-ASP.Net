@@ -60,5 +60,9 @@ namespace PracticeSiteForASPDotNet.WorkingDir.Important
             }
         }
 
+        protected void UploadFile(object sender, EventArgs e)
+        {
+            int i = 0;
+        }
     }
 }

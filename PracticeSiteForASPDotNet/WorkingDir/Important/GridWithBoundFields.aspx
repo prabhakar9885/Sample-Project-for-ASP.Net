@@ -59,7 +59,7 @@
                 <asp:BoundField HeaderText="Job" DataField="Job" SortExpression="Job" ItemStyle-Width="150px" />
                 <asp:TemplateField HeaderText="Action" ItemStyle-Width="150px">
                     <ItemTemplate>
-                        <asp:LinkButton ID="UploadLink" runat="server">Upload</asp:LinkButton>
+                        <asp:LinkButton ID="UploadLink" OnClick="UploadFile" runat="server">Upload</asp:LinkButton>
                     </ItemTemplate>
                 </asp:TemplateField>
             </Columns>
