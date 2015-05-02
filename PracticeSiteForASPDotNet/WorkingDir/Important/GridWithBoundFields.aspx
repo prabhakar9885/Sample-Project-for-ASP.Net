@@ -40,22 +40,18 @@
     </div>
     <div style="height: 200px; width: 906px; overflow: scroll;">
         <asp:GridView ID="GridView1" runat="server" AllowPaging="false" ShowHeader="false"
-            AutoGenerateColumns="false" PageSize="5" AllowSorting="true" 
-            OnSorting="GridView1_Sorting" onrowcommand="GridView1_RowCommand">
+            AutoGenerateColumns="false" PageSize="5" AllowSorting="true" OnSorting="GridView1_Sorting"
+            OnRowCommand="GridView1_RowCommand">
             <AlternatingRowStyle BackColor="YELLOW" />
             <Columns>
                 <asp:TemplateField HeaderText="Emp Id" SortExpression="empno" HeaderStyle-Width="120px"
                     ItemStyle-Width="120px">
                     <ItemTemplate>
-                        <asp:LinkButton ID="View" runat="server" CommandName="IdNameSal" 
-                                CommandArgument='<%#Eval("empno") + ";"+Eval("ename") + ";"+Eval("Salary") %>'>
+                        <asp:LinkButton ID="View" runat="server" CommandName="IdNameSal" CommandArgument='<%#Eval("empno") + ";"+Eval("ename") + ";"+Eval("Salary") %>'>
                                 <%#Eval("empno")%>
                         </asp:LinkButton>
                     </ItemTemplate>
                 </asp:TemplateField>
-            </Columns>
-            <Columns>
-                <%--<asp:BoundField HeaderText="Emp Id" DataField="empno" SortExpression="empno" ItemStyle-Width="150px" />--%>
                 <asp:BoundField HeaderText="Name" DataField="ename" SortExpression="ename" ItemStyle-Width="150px" />
                 <asp:BoundField HeaderText="Manager" DataField="ManagerName" SortExpression="ManagerName"
                     ItemStyle-Width="150px" />
