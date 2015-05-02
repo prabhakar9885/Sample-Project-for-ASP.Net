@@ -1,9 +1,11 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" EnableViewState="true" CodeBehind="GridWithBoundFields.aspx.cs"
+    EnableEventValidation="false"
     Inherits="PracticeSiteForASPDotNet.WorkingDir.Important.GridWithBoundFields" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <script src="../../Scripts/jquery-2.1.3.js" type="text/javascript"></script>
     <title></title>
 </head>
 <body>
@@ -12,19 +14,24 @@
         <table cellspacing="0" rules="all" border="1" id="Table1" style="border-collapse: collapse;">
             <tr>
                 <td style="width: 120px;">
-                    Emp Id
+                    <asp:LinkButton ID="Sort1" OnClientClick="javascript:__doPostBack('GridView1','Sort$empno')"
+                        runat="server">Emp Id</asp:LinkButton>
                 </td>
                 <td style="width: 150px;">
-                    Name
+                    <asp:LinkButton ID="Sort2" OnClientClick="javascript:__doPostBack('GridView1','Sort$ename')"
+                        runat="server">Name</asp:LinkButton>
                 </td>
                 <td style="width: 150px;">
-                    Manager
+                    <asp:LinkButton ID="Sort3" OnClientClick="javascript:__doPostBack('GridView1','Sort$ManagerName')"
+                        runat="server">Manager</asp:LinkButton>
                 </td>
                 <td style="width: 150px;">
-                    Aslary
+                    <asp:LinkButton ID="Sort4" OnClientClick="javascript:__doPostBack('GridView1','Sort$Salary')"
+                        runat="server">Salary</asp:LinkButton>
                 </td>
                 <td style="width: 150px;">
-                    Job
+                    <asp:LinkButton ID="Sort5" OnClientClick="javascript:__doPostBack('GridView1','Sort$Job')"
+                        runat="server">Job</asp:LinkButton>
                 </td>
                 <td style="width: 150px;">
                     Action

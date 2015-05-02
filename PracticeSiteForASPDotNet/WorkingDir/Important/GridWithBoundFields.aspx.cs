@@ -21,9 +21,12 @@ namespace PracticeSiteForASPDotNet.WorkingDir.Important
         protected void Page_Load(object sender, EventArgs e)
         {
             DataAccessServiceClient dsc = new DataAccessServiceClient();
-            dt = dsc.GetEmployeeDataTable().Tables[0] ;
-            GridView1.DataSource = dt;
-            GridView1.DataBind();
+            dt = dsc.GetEmployeeDataTable().Tables[0];
+            if (!IsPostBack)
+            {
+                GridView1.DataSource = dt;
+                GridView1.DataBind();
+            }
         }
 
         protected void GridView1_Sorting(object sender, GridViewSortEventArgs e)

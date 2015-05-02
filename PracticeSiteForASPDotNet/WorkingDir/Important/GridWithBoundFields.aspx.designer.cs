@@ -8,10 +8,9 @@
 //------------------------------------------------------------------------------
 
 namespace PracticeSiteForASPDotNet.WorkingDir.Important {
-
-
-    public partial class GridWithBoundFields
-    {
+    
+    
+    public partial class GridWithBoundFields {
         
         /// <summary>
         /// form1 control.
@@ -21,6 +20,51 @@ namespace PracticeSiteForASPDotNet.WorkingDir.Important {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        
+        /// <summary>
+        /// Sort1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton Sort1;
+        
+        /// <summary>
+        /// Sort2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton Sort2;
+        
+        /// <summary>
+        /// Sort3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton Sort3;
+        
+        /// <summary>
+        /// Sort4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton Sort4;
+        
+        /// <summary>
+        /// Sort5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton Sort5;
         
         /// <summary>
         /// GridView1 control.
