@@ -73,6 +73,7 @@
     <Content Include="WorkingDir\AjaxPageMethods\AjaxPageMethod_1.aspx" />
     <Content Include="WorkingDir\AjaxPageMethods\AjaxPageMethod_2.aspx" />
     <Content Include="WorkingDir\AjaxPageMethods\Default.aspx" />
+    <Content Include="WorkingDir\GeneralErrors\RegisterForEventValidation.aspx" />
     <Content Include="WorkingDir\Important\UploadAndDisplayPDF.aspx" />
     <Content Include="WorkingDir\Important\GridWithItemTemplate.aspx" />
     <Content Include="WorkingDir\Important\GridWithBoundFields.aspx" />
@@ -86,7 +87,7 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="WorkingDir\Categories\Electronics\ListItems.aspx" />
+    <Content Include="WorkingDir\Server Controls\ListItems.aspx" />
     <Content Include="WorkingDir\Data\Countries\Countries.xml" />
     <Content Include="WorkingDir\Server Controls\Buttons.aspx" />
     <Content Include="WorkingDir\Server Controls\DropDownList.aspx" />
@@ -168,11 +169,18 @@
     <Compile Include="WorkingDir\AjaxPageMethods\AjaxPageMethod_2.aspx.designer.cs">
       <DependentUpon>AjaxPageMethod_2.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WorkingDir\Categories\Electronics\ListItems.aspx.cs">
+    <Compile Include="WorkingDir\GeneralErrors\RegisterForEventValidation.aspx.cs">
+      <DependentUpon>RegisterForEventValidation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkingDir\GeneralErrors\RegisterForEventValidation.aspx.designer.cs">
+      <DependentUpon>RegisterForEventValidation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkingDir\Server Controls\ListItems.aspx.cs">
       <DependentUpon>ListItems.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WorkingDir\Categories\Electronics\ListItems.aspx.designer.cs">
+    <Compile Include="WorkingDir\Server Controls\ListItems.aspx.designer.cs">
       <DependentUpon>ListItems.aspx</DependentUpon>
     </Compile>
     <Compile Include="WorkingDir\AjaxPageMethods\AjaxPageMethod_1.aspx.cs">
