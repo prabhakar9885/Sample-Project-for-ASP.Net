@@ -49,5 +49,16 @@ namespace PracticeSiteForASPDotNet.WorkingDir.Important
             return ViewState["SortDirection"].ToString();
         }
 
+        protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "IdNameSal")
+            {
+                string[] arr = e.CommandArgument.ToString().Split(new char[] { ';' });
+                SelectedId.InnerText = arr[0];
+                SelectedName.InnerText = arr[1];
+                SelectedSalary.InnerText = arr[2];
+            }
+        }
+
     }
 }

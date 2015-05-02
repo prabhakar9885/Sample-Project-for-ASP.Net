@@ -1,6 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" EnableViewState="true" CodeBehind="GridWithBoundFields.aspx.cs"
-    EnableEventValidation="false"
-    Inherits="PracticeSiteForASPDotNet.WorkingDir.Important.GridWithBoundFields" %>
+    EnableEventValidation="false" Inherits="PracticeSiteForASPDotNet.WorkingDir.Important.GridWithBoundFields" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -41,16 +40,16 @@
     </div>
     <div style="height: 200px; width: 906px; overflow: scroll;">
         <asp:GridView ID="GridView1" runat="server" AllowPaging="false" ShowHeader="false"
-            AutoGenerateColumns="false" PageSize="5" AllowSorting="true" OnSorting="GridView1_Sorting">
+            AutoGenerateColumns="false" PageSize="5" AllowSorting="true" 
+            OnSorting="GridView1_Sorting" onrowcommand="GridView1_RowCommand">
             <AlternatingRowStyle BackColor="YELLOW" />
             <Columns>
                 <asp:TemplateField HeaderText="Emp Id" SortExpression="empno" HeaderStyle-Width="120px"
                     ItemStyle-Width="120px">
                     <ItemTemplate>
-                        <asp:LinkButton ID="View" runat="server">
-                            <%--CommandName="View" 
-                            CommandArgument='<%#Eval("ename") %>;<%#Eval("ManagerName") %>;<%#Eval("Salary") %>'>--%>
-                                <%#Eval("empno") %>
+                        <asp:LinkButton ID="View" runat="server" CommandName="IdNameSal" 
+                                CommandArgument='<%#Eval("empno") + ";"+Eval("ename") + ";"+Eval("Salary") %>'>
+                                <%#Eval("empno")%>
                         </asp:LinkButton>
                     </ItemTemplate>
                 </asp:TemplateField>
@@ -69,6 +68,17 @@
                 </asp:TemplateField>
             </Columns>
         </asp:GridView>
+    </div>
+    <div>
+        <div>
+            <b>Id: </b><span id="SelectedId" runat="server"></span>
+        </div>
+        <div>
+            <b>Name: </b><span id="SelectedName" runat="server"></span>
+        </div>
+        <div>
+            <b>Salary: </b><span id="SelectedSalary" runat="server"></span>
+        </div>
     </div>
     </form>
 </body>
