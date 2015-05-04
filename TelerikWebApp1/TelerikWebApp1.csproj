@@ -160,7 +160,6 @@
     <Content Include="Workspace\Telerik\RadGridDemo.aspx" />
     <Content Include="Workspace\Telerik\RadGridDemo2.aspx" />
     <Content Include="Workspace\Telerik\TelerikControlsDemo.aspx" />
-    <Content Include="Workspace\Telerik\Webinar\Grid.aspx" />
     <Content Include="Workspace\Telerik\Webinar\FilterDemo.aspx" />
     <Content Include="Workspace\Telerik\Webinar\PagingDemo.aspx" />
   </ItemGroup>
@@ -322,13 +321,6 @@
     </Compile>
     <Compile Include="Workspace\Telerik\TelerikControlsDemo.aspx.designer.cs">
       <DependentUpon>TelerikControlsDemo.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Workspace\Telerik\Webinar\Grid.aspx.cs">
-      <DependentUpon>Grid.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Workspace\Telerik\Webinar\Grid.aspx.designer.cs">
-      <DependentUpon>Grid.aspx</DependentUpon>
     </Compile>
     <Compile Include="Workspace\Telerik\Webinar\FilterDemo.aspx.cs">
       <DependentUpon>FilterDemo.aspx</DependentUpon>

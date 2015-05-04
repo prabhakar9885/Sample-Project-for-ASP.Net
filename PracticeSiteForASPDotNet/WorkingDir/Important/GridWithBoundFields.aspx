@@ -6,14 +6,16 @@
 <head runat="server">
     <script src="../../Scripts/jquery-2.1.3.js" type="text/javascript"></script>
     <script type="text/javascript">
-        function showBrowseDialog() {
+        $(function () {
             var fileuploadctrl = document.getElementById('<%=FileUpload1.ClientID%>');
+            debugger;
             fileuploadctrl.click();
             return false;
-        }
-        $(document).on('change', 'input[type="file"]', function () {
-            $(this).parents('form').submit(); //then submit its parent form
         });
+//        $(document).on('change', 'input[type="file"]', function () {
+//            debugger;
+//            $(this).parents('form').submit(); //then submit its parent form
+//        });
     </script>
     <title></title>
 </head>
@@ -51,7 +53,7 @@
     <div style="height: 200px; width: 906px; overflow: scroll;">
         <asp:GridView ID="GridView1" runat="server" AllowPaging="false" ShowHeader="false"
             AutoGenerateColumns="false" PageSize="5" AllowSorting="true" OnSorting="GridView1_Sorting"
-            OnRowCommand="GridView1_RowCommand" OnDataBound="GridView1_DataBound">
+            OnRowCommand="GridView1_RowCommand" OnDataBound="GridView1_DataBound" OnRowDataBound="GridView1_RowDataBound">
             <AlternatingRowStyle BackColor="YELLOW" />
             <Columns>
                 <asp:TemplateField HeaderText="Emp Id" SortExpression="empno" HeaderStyle-Width="120px"
@@ -73,7 +75,8 @@
                 <asp:BoundField HeaderText="Job" DataField="Job" SortExpression="Job" ItemStyle-Width="150px" />
                 <asp:TemplateField HeaderText="Action" ItemStyle-Width="150px">
                     <ItemTemplate>
-                        <asp:LinkButton ID="UploadLink" OnClientClick="return showBrowseDialog();" runat="server">Upload</asp:LinkButton>
+                        <input type="hidden" value='<%#Eval("Salary") %>' />
+                        <asp:LinkButton ID="UploadLink" runat="server">Upload</asp:LinkButton>
                     </ItemTemplate>
                 </asp:TemplateField>
             </Columns>

@@ -29,7 +29,7 @@ namespace PracticeSiteForASPDotNet.WorkingDir.Important
                 GridView1.DataBind();
             }
 
-            if (IsPostBack && FileUpload1.PostedFile != null)
+            if (IsPostBack && FileUpload1.PostedFile != null && FileUpload1.HasFile)
             {
                 if (FileUpload1.PostedFile.FileName.Length > 0)
                 {
@@ -92,6 +92,15 @@ namespace PracticeSiteForASPDotNet.WorkingDir.Important
                     GridView1.Rows[i].Cells[3].BackColor = Color.Green;
                     l.ForeColor = Color.White;
                 }
+            }
+        }
+
+        protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                LinkButton lb = (LinkButton)e.Row.FindControl("UploadLink");
+                lb.Attributes["onclick"] = "javascript:return showBrowseDialog('" + e.Row.RowIndex + "')";
             }
         }
 
