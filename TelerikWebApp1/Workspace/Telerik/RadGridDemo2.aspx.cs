@@ -62,10 +62,14 @@ public partial class RadGridDemo2 : System.Web.UI.Page
                     GridTableCell cell = (GridTableCell)gdi["empnoUnique"];
                     HyperLink link = (HyperLink)cell.FindControl("Link");
 
-                    link.Attributes.Add("href", "http://google.com?q=" + gdi["enameUnique"].Text.Trim());
-                    link.Target = "_new";
+                    link.Attributes.Add("href", "RadWindowContent.aspx?" +
+                        "ename=" + gdi["enameUnique"].Text.Trim() +"&"+
+                        "job=" + gdi["Job"].Text.Trim() + "&" +
+                        "salary=" + gdi["SalaryUnique"].Text.Trim() + "&" +
+                        "manager=" + gdi["ManagerName"].Text.Trim());
                 }
-                else if (double.Parse(gdi["SalaryUnique"].Text.Replace(",", "").ToString()) <= 25000)
+                else if (double.Parse(gdi["SalaryUnique"]
+                            .Text.Replace(",", "").ToString()) <= 25000)
                     gdi["SalaryUnique"].BackColor = Color.Yellow;
             }
             catch (Exception ex)

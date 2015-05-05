@@ -140,6 +140,7 @@
     <Content Include="MasterPage.Master" />
     <Content Include="MasterPageSingleMenu.Master" />
     <None Include="Properties\DataSources\DataAccessLayer.EmployeeDataContract.datasource" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
     <None Include="Service References\DataAccessRef\configuration91.svcinfo" />
     <None Include="Service References\DataAccessRef\configuration.svcinfo" />
     <None Include="Service References\DataAccessRef\Reference.svcmap">
@@ -159,9 +160,13 @@
     <Content Include="Workspace\Telerik\RadControlsDemo.aspx" />
     <Content Include="Workspace\Telerik\RadGridDemo.aspx" />
     <Content Include="Workspace\Telerik\RadGridDemo2.aspx" />
+    <Content Include="Workspace\Telerik\RadWindowContent.aspx" />
     <Content Include="Workspace\Telerik\TelerikControlsDemo.aspx" />
     <Content Include="Workspace\Telerik\Webinar\FilterDemo.aspx" />
     <Content Include="Workspace\Telerik\Webinar\PagingDemo.aspx" />
+    <None Include="Service References\DataAccessRef\service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.aspx" />
@@ -315,6 +320,13 @@
     <Compile Include="Workspace\Telerik\RadGridDemo2.aspx.designer.cs">
       <DependentUpon>RadGridDemo2.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Workspace\Telerik\RadWindowContent.aspx.cs">
+      <DependentUpon>RadWindowContent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Workspace\Telerik\RadWindowContent.aspx.designer.cs">
+      <DependentUpon>RadWindowContent.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Workspace\Telerik\TelerikControlsDemo.aspx.cs">
       <DependentUpon>TelerikControlsDemo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -401,7 +413,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
+      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

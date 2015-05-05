@@ -70,10 +70,12 @@
     </div>
 
     <script type="text/javascript">
-        $(".ClickEvent").click(function () {
+        $(".ClickEvent").click(function (e) {
             var wndo = $find("<%=RadWindow1.ClientID %>");
-            wndo.setUrl("");
+            debugger;
+            wndo.setUrl(e.target.href);
             wndo.show();
+            return false;
         });
     </script>
 
