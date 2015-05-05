@@ -17,6 +17,9 @@ namespace TelerikWebApp1.DataAccessRef {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataAccessService/GetEmployeeData", ReplyAction="http://tempuri.org/IDataAccessService/GetEmployeeDataResponse")]
         DataAccessLayer.EmployeeDataContract GetEmployeeData(int value);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataAccessService/GetEmployeeDataTable", ReplyAction="http://tempuri.org/IDataAccessService/GetEmployeeDataTableResponse")]
+        System.Data.DataSet GetEmployeeDataTable();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -48,6 +51,10 @@ namespace TelerikWebApp1.DataAccessRef {
         
         public DataAccessLayer.EmployeeDataContract GetEmployeeData(int value) {
             return base.Channel.GetEmployeeData(value);
+        }
+        
+        public System.Data.DataSet GetEmployeeDataTable() {
+            return base.Channel.GetEmployeeDataTable();
         }
     }
 }
