@@ -19,7 +19,16 @@ public partial class RadGridDemo2 : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        //if (IsPostBack && FileUpload1.PostedFile != null)
+        //{
+        //    if (FileUpload1.PostedFile.FileName.Length > 0)
+        //    {
+        //        FileUpload1.SaveAs(Server.MapPath("~/Workspace/Uploads/" + FileUpload1.FileName));
+        //        ScriptHolder.InnerHtml = "var wndo = $find('<%=RadWindow2.ClientID %>');"+
+        //                                    "wndo.setUrl(e.target.href);"+
+        //                                    "wndo.show();";
+        //    }
+        //}
     }
 
     protected void RadGrid1_SortCommand(object sender, GridSortCommandEventArgs e)
@@ -54,16 +63,27 @@ public partial class RadGridDemo2 : System.Web.UI.Page
     {
         if (e.Item is GridDataItem)
         {
-            GridDataItem gdi = (GridDataItem)e.Item ;
+            GridDataItem gdi = (GridDataItem)e.Item;
             try
             {
-                if (gdi["empnoUnique"] != null)
+                if( gdi["ActionColumn"] != null)
+                {
+                //    GridTableCell cell = (GridTableCell)gdi["empnoUnique"];
+                //    HyperLink link = (HyperLink)cell.FindControl("Link2");
+
+                //    link.Attributes.Add("href", "RadWindowContent.aspx?" +
+                //        "ename=" + gdi["enameUnique"].Text.Trim() + "&" +
+                //        "job=" + gdi["Job"].Text.Trim() + "&" +
+                //        "salary=" + gdi["SalaryUnique"].Text.Trim() + "&" +
+                //        "manager=" + gdi["ManagerName"].Text.Trim());
+                }
+                else if (gdi["empnoUnique"] != null)
                 {
                     GridTableCell cell = (GridTableCell)gdi["empnoUnique"];
                     HyperLink link = (HyperLink)cell.FindControl("Link");
 
                     link.Attributes.Add("href", "RadWindowContent.aspx?" +
-                        "ename=" + gdi["enameUnique"].Text.Trim() +"&"+
+                        "ename=" + gdi["enameUnique"].Text.Trim() + "&" +
                         "job=" + gdi["Job"].Text.Trim() + "&" +
                         "salary=" + gdi["SalaryUnique"].Text.Trim() + "&" +
                         "manager=" + gdi["ManagerName"].Text.Trim());
@@ -74,7 +94,7 @@ public partial class RadGridDemo2 : System.Web.UI.Page
             }
             catch (Exception ex)
             {
-                
+
                 throw;
             }
 

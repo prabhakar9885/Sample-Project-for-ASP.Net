@@ -30,6 +30,24 @@ public partial class RadGridDemo2 {
     protected global::System.Web.UI.HtmlControls.HtmlForm form1;
     
     /// <summary>
+    /// FileUpload1 control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.FileUpload FileUpload1;
+    
+    /// <summary>
+    /// ScriptHolder control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.HtmlControls.HtmlGenericControl ScriptHolder;
+    
+    /// <summary>
     /// RadScriptManager1 control.
     /// </summary>
     /// <remarks>
@@ -73,4 +91,13 @@ public partial class RadGridDemo2 {
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
     protected global::Telerik.Web.UI.RadWindow RadWindow1;
+    
+    /// <summary>
+    /// RadWindow2 control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::Telerik.Web.UI.RadWindow RadWindow2;
 }

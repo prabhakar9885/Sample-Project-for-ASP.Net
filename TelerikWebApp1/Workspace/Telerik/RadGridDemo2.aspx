@@ -5,11 +5,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <style type="text/css">
+        div.RadUpload .ruFakeInput
+        {
+            visibility: hidden;
+            width: 0;
+            padding: 0;
+        }
+        div.RadUpload .ruFileInput
+        {
+            width: 1;
+        }
+    </style>
     <script src="http://localhost:1392/Scripts/jquery-2.1.3.js" type="text/javascript"></script>
     <telerik:RadStyleSheetManager ID="RadStyleSheetManager1" runat="server" />
 </head>
 <body>
     <form id="form1" runat="server">
+    <asp:FileUpload ID="FileUpload1" runat="server" onchange="this.form1.submit();" Style="display: none;" />
+    <label id="ScriptHolder" style="visibility: hidden;" runat="server">
+    </label>
     <telerik:RadScriptManager ID="RadScriptManager1" runat="server">
         <Scripts>
             <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.Core.js" />
@@ -18,15 +33,15 @@
         </Scripts>
     </telerik:RadScriptManager>
     <script type="text/javascript">
-        //Put your JavaScript code here.
+        // My Javascript
     </script>
     <telerik:RadAjaxManager ID="RadAjaxManager1" runat="server">
     </telerik:RadAjaxManager>
     <div>
         <telerik:RadGrid ID="RadGrid1" runat="server" AllowSorting="True" GridLines="Horizontal"
             OnSortCommand="RadGrid1_SortCommand" AutoGenerateColumns="False" GroupPanelPosition="Top"
-            onneeddatasource="RadGrid1_NeedDataSource" 
-            onitemdatabound="RadGrid1_ItemDataBound" ResolvedRenderMode="Classic">
+            OnNeedDataSource="RadGrid1_NeedDataSource" OnItemDataBound="RadGrid1_ItemDataBound"
+            ResolvedRenderMode="Classic">
             <ClientSettings KeyboardNavigationSettings-AllowActiveRowCycle="true">
                 <KeyboardNavigationSettings AllowActiveRowCycle="True"></KeyboardNavigationSettings>
                 <Scrolling AllowScroll="true" UseStaticHeaders="true" SaveScrollPosition="true" />
@@ -34,12 +49,10 @@
             <HeaderStyle HorizontalAlign="Left" />
             <MasterTableView AllowMultiColumnSorting="false" Width="100%" TableLayout="Fixed">
                 <Columns>
-                    <telerik:GridTemplateColumn DataField="empno" 
-                        FilterControlAltText="Filter column column" HeaderButtonType="TextButton" 
-                        HeaderText="Emp #" SortExpression="empno" UniqueName="empnoUnique">
+                    <telerik:GridTemplateColumn DataField="empno" FilterControlAltText="Filter column column"
+                        HeaderButtonType="TextButton" HeaderText="Emp #" SortExpression="empno" UniqueName="empnoUnique">
                         <ItemTemplate>
-                            <asp:HyperLink ID="Link" CssClass="ClickEvent" runat="server" NavigateUrl="" 
-                                Text='<%# DataBinder.Eval(Container, "DataItem.empno") %>'></asp:HyperLink>
+                            <asp:HyperLink ID="Link" CssClass="ClickEvent" runat="server" NavigateUrl="" Text='<%# DataBinder.Eval(Container, "DataItem.empno") %>'></asp:HyperLink>
                         </ItemTemplate>
                     </telerik:GridTemplateColumn>
                     <telerik:GridBoundColumn DataField="ename" HeaderText="Name" SortExpression="ename"
@@ -54,21 +67,20 @@
                     <telerik:GridBoundColumn DataField="ManagerName" HeaderText="Manager" SortExpression="ManagerName"
                         HeaderButtonType="TextButton" UniqueName="ManagerName" FilterControlAltText="Filter ManagerName column">
                     </telerik:GridBoundColumn>
-
-                    
-                    <telerik:GridHyperLinkColumn AllowSorting="False" 
-                        FilterControlAltText="Filter column column" HeaderText="Action" 
-                        Text="Upload SOW" UniqueName="column">
-                    </telerik:GridHyperLinkColumn>
-
-                    
+                    <telerik:GridTemplateColumn FilterControlAltText="Filter column column" HeaderText="Action"
+                        UniqueName="ActionColumn">
+                        <ItemTemplate>
+                            <telerik:RadUpload ID="RadUpload1" runat="server" Width="230px" ControlObjectsVisibility="None"
+                                TargetFolder="~/Workspace/Uploads" InitialFileInputsCount="1">
+                            </telerik:RadUpload>
+                        </ItemTemplate>
+                    </telerik:GridTemplateColumn>
                 </Columns>
             </MasterTableView>
             <SortingSettings EnableSkinSortStyles="false"></SortingSettings>
             <SelectedItemStyle BorderColor="Aqua" />
         </telerik:RadGrid>
     </div>
-
     <script type="text/javascript">
         $(".ClickEvent").click(function (e) {
             var wndo = $find("<%=RadWindow1.ClientID %>");
@@ -78,16 +90,14 @@
             return false;
         });
     </script>
-
-
-    <telerik:RadWindowManager ID="RadWindowManager1" runat="server" 
-        ResolvedRenderMode="Classic">
+    <telerik:RadWindowManager ID="RadWindowManager1" runat="server" ResolvedRenderMode="Classic">
         <Windows>
-            <telerik:RadWindow ID="RadWindow1" runat="server" style="display:none;">
+            <telerik:RadWindow ID="RadWindow1" runat="server" Style="display: none;">
+            </telerik:RadWindow>
+            <telerik:RadWindow ID="RadWindow2" runat="server" Style="display: none;">
             </telerik:RadWindow>
         </Windows>
     </telerik:RadWindowManager>
-
     </form>
 </body>
 </html>
