@@ -157,6 +157,7 @@
     <Content Include="Workspace\EmployeeServiceConsumer\DropDownList.aspx" />
     <Content Include="Workspace\EmployeeServiceConsumer\EmployeeDetails.aspx" />
     <Content Include="Workspace\EmployeeServiceConsumer\FileUpload.aspx" />
+    <Content Include="Workspace\Telerik\RadWindowContent2.aspx" />
     <Content Include="Workspace\Telerik\RadControlsDemo.aspx" />
     <Content Include="Workspace\Telerik\RadGridDemo.aspx" />
     <Content Include="Workspace\Telerik\RadGridDemo2.aspx" />
@@ -298,6 +299,13 @@
     </Compile>
     <Compile Include="Workspace\EmployeeServiceConsumer\FileUpload.aspx.designer.cs">
       <DependentUpon>FileUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Workspace\Telerik\RadWindowContent2.aspx.cs">
+      <DependentUpon>RadWindowContent2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Workspace\Telerik\RadWindowContent2.aspx.designer.cs">
+      <DependentUpon>RadWindowContent2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Workspace\Telerik\RadControlsDemo.aspx.cs">
       <DependentUpon>RadControlsDemo.aspx</DependentUpon>

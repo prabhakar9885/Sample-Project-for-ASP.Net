@@ -70,9 +70,7 @@
                     <telerik:GridTemplateColumn FilterControlAltText="Filter column column" HeaderText="Action"
                         UniqueName="ActionColumn">
                         <ItemTemplate>
-                            <telerik:RadUpload ID="RadUpload1" runat="server" Width="230px" ControlObjectsVisibility="None"
-                                TargetFolder="~/Workspace/Uploads" InitialFileInputsCount="1">
-                            </telerik:RadUpload>
+                            <asp:HyperLink ID="Link2" CssClass="ClickEvent" runat="server" NavigateUrl="" Text='Upload File'></asp:HyperLink>
                         </ItemTemplate>
                     </telerik:GridTemplateColumn>
                 </Columns>
@@ -93,8 +91,6 @@
     <telerik:RadWindowManager ID="RadWindowManager1" runat="server" ResolvedRenderMode="Classic">
         <Windows>
             <telerik:RadWindow ID="RadWindow1" runat="server" Style="display: none;">
-            </telerik:RadWindow>
-            <telerik:RadWindow ID="RadWindow2" runat="server" Style="display: none;">
             </telerik:RadWindow>
         </Windows>
     </telerik:RadWindowManager>

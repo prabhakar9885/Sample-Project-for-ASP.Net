@@ -68,16 +68,16 @@ public partial class RadGridDemo2 : System.Web.UI.Page
             {
                 if( gdi["ActionColumn"] != null)
                 {
-                //    GridTableCell cell = (GridTableCell)gdi["empnoUnique"];
-                //    HyperLink link = (HyperLink)cell.FindControl("Link2");
-
-                //    link.Attributes.Add("href", "RadWindowContent.aspx?" +
-                //        "ename=" + gdi["enameUnique"].Text.Trim() + "&" +
-                //        "job=" + gdi["Job"].Text.Trim() + "&" +
-                //        "salary=" + gdi["SalaryUnique"].Text.Trim() + "&" +
-                //        "manager=" + gdi["ManagerName"].Text.Trim());
+                    GridTableCell cell = (GridTableCell)gdi["ActionColumn"];
+                    HyperLink link = (HyperLink)cell.FindControl("Link2");
+                    
+                    link.Attributes.Add("href", "RadWindowContent2.aspx?" +
+                        "ename=" + gdi["enameUnique"].Text.Trim() + "&" +
+                        "job=" + gdi["Job"].Text.Trim() + "&" +
+                        "salary=" + gdi["SalaryUnique"].Text.Trim() + "&" +
+                        "manager=" + gdi["ManagerName"].Text.Trim());
                 }
-                else if (gdi["empnoUnique"] != null)
+                if (gdi["empnoUnique"] != null)
                 {
                     GridTableCell cell = (GridTableCell)gdi["empnoUnique"];
                     HyperLink link = (HyperLink)cell.FindControl("Link");
