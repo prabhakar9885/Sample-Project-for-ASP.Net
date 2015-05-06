@@ -157,11 +157,11 @@
     <Content Include="Workspace\EmployeeServiceConsumer\DropDownList.aspx" />
     <Content Include="Workspace\EmployeeServiceConsumer\EmployeeDetails.aspx" />
     <Content Include="Workspace\EmployeeServiceConsumer\FileUpload.aspx" />
-    <Content Include="Workspace\Telerik\RadWindowContent2.aspx" />
+    <Content Include="Workspace\Telerik\RadGrid\PopUps\RadWindowContent2.aspx" />
     <Content Include="Workspace\Telerik\RadControlsDemo.aspx" />
     <Content Include="Workspace\Telerik\RadGridDemo.aspx" />
-    <Content Include="Workspace\Telerik\RadGridDemo2.aspx" />
-    <Content Include="Workspace\Telerik\RadWindowContent.aspx" />
+    <Content Include="Workspace\Telerik\RadGrid\RadGridDemo2.aspx" />
+    <Content Include="Workspace\Telerik\RadGrid\PopUps\RadWindowContent.aspx" />
     <Content Include="Workspace\Telerik\TelerikControlsDemo.aspx" />
     <Content Include="Workspace\Telerik\Webinar\FilterDemo.aspx" />
     <Content Include="Workspace\Telerik\Webinar\PagingDemo.aspx" />
@@ -300,11 +300,11 @@
     <Compile Include="Workspace\EmployeeServiceConsumer\FileUpload.aspx.designer.cs">
       <DependentUpon>FileUpload.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Workspace\Telerik\RadWindowContent2.aspx.cs">
+    <Compile Include="Workspace\Telerik\RadGrid\PopUps\RadWindowContent2.aspx.cs">
       <DependentUpon>RadWindowContent2.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Workspace\Telerik\RadWindowContent2.aspx.designer.cs">
+    <Compile Include="Workspace\Telerik\RadGrid\PopUps\RadWindowContent2.aspx.designer.cs">
       <DependentUpon>RadWindowContent2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Workspace\Telerik\RadControlsDemo.aspx.cs">
@@ -321,18 +321,18 @@
     <Compile Include="Workspace\Telerik\RadGridDemo.aspx.designer.cs">
       <DependentUpon>RadGridDemo.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Workspace\Telerik\RadGridDemo2.aspx.cs">
+    <Compile Include="Workspace\Telerik\RadGrid\RadGridDemo2.aspx.cs">
       <DependentUpon>RadGridDemo2.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Workspace\Telerik\RadGridDemo2.aspx.designer.cs">
+    <Compile Include="Workspace\Telerik\RadGrid\RadGridDemo2.aspx.designer.cs">
       <DependentUpon>RadGridDemo2.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Workspace\Telerik\RadWindowContent.aspx.cs">
+    <Compile Include="Workspace\Telerik\RadGrid\PopUps\RadWindowContent.aspx.cs">
       <DependentUpon>RadWindowContent.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Workspace\Telerik\RadWindowContent.aspx.designer.cs">
+    <Compile Include="Workspace\Telerik\RadGrid\PopUps\RadWindowContent.aspx.designer.cs">
       <DependentUpon>RadWindowContent.aspx</DependentUpon>
     </Compile>
     <Compile Include="Workspace\Telerik\TelerikControlsDemo.aspx.cs">

@@ -71,7 +71,7 @@ public partial class RadGridDemo2 : System.Web.UI.Page
                     GridTableCell cell = (GridTableCell)gdi["ActionColumn"];
                     HyperLink link = (HyperLink)cell.FindControl("Link2");
                     
-                    link.Attributes.Add("href", "RadWindowContent2.aspx?" +
+                    link.Attributes.Add("href", "PopUps/RadWindowContent2.aspx?" +
                         "ename=" + gdi["enameUnique"].Text.Trim() + "&" +
                         "job=" + gdi["Job"].Text.Trim() + "&" +
                         "salary=" + gdi["SalaryUnique"].Text.Trim() + "&" +
@@ -82,7 +82,7 @@ public partial class RadGridDemo2 : System.Web.UI.Page
                     GridTableCell cell = (GridTableCell)gdi["empnoUnique"];
                     HyperLink link = (HyperLink)cell.FindControl("Link");
 
-                    link.Attributes.Add("href", "RadWindowContent.aspx?" +
+                    link.Attributes.Add("href", "PopUps/RadWindowContent.aspx?" +
                         "ename=" + gdi["enameUnique"].Text.Trim() + "&" +
                         "job=" + gdi["Job"].Text.Trim() + "&" +
                         "salary=" + gdi["SalaryUnique"].Text.Trim() + "&" +
