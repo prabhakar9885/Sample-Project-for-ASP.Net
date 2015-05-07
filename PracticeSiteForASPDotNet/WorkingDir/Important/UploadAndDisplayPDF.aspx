@@ -14,6 +14,8 @@
     <div style="margin: 5px;" id="Outline" runat="server">
         <div id="placeholder" runat="server">
         </div>
+        <iframe id="IFrame" runat="server" src="/WorkingDir/Uploads/Flipkart.pdf">
+        </iframe>
     </div>
     </form>
 </body>

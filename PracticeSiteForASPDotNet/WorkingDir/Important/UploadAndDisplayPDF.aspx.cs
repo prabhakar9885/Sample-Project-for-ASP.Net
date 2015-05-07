@@ -29,11 +29,11 @@ namespace PracticeSiteForASPDotNet.WorkingDir.Important
 
                 FileUpload1.SaveAs(Server.MapPath("~" + path));
                 
-                placeholder.Attributes.Add("css", "border-color:Green; border-width: 5px");
-                placeholder.InnerHtml =
-                 @"<object data='" + path + @"' type='application/pdf' width='300' height='200'                                  runat='server' id='PdfObj'>
-                        alt : <a href='" + path + @"' runat='server' id='pdfAlt'>test.pdf</a>
-                  </object>";
+//                placeholder.Attributes.Add("css", "border-color:Green; border-width: 5px");
+//                placeholder.InnerHtml =
+//                 @"<object data='" + path + @"' type='application/pdf' width='300' height='200'                                  runat='server' id='PdfObj'>
+//                        alt : <a href='" + path + @"' runat='server' id='pdfAlt'>test.pdf</a>
+//                  </object>";
             }
         }
 
