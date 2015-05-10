@@ -23,7 +23,7 @@
     </telerik:RadAjaxManager>
     <div>
         <telerik:RadGrid ID="RadGrid1" runat="server" AutoGenerateColumns="False" OnNeedDataSource="NeedDataSource_Handler"
-            OnPreRender="RadGrid1_PreRender" GroupPanelPosition="Top" OnItemCommand="RadGrid1_ItemCommand"
+            OnPreRender="" GroupPanelPosition="Top" 
             ResolvedRenderMode="Classic" OnItemDataBound="RadGrid1_ItemDataBound" 
             OnUpdateCommand="RadGrid1_UpdateCommand" OnEditCommand="RadGrid1_EditCommand"
             OnInsertCommand="RadGrid1_InsertCommand">

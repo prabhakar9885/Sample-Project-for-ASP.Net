@@ -28,17 +28,6 @@ public partial class GridToDatatable : System.Web.UI.Page
         EmployeeDataContract edc;
         edc = GetAppropriateDataObject();
         ((RadGrid)sender).DataSource = edc.Employees;
-    
-        // Bind AutoComplete values
-        //foreach (GridDataItem item in RadGrid1.Items)
-        //{
-        //    RadAutoCompleteBox racb = (item["ManagerNameUnique"].FindControl("ManagerAC")
-        //                                            as RadAutoCompleteBox);
-        //    List<string> ManagersList = (from emp in edc.Employees
-        //                                select emp.ManagerName).ToList<string>();
-        //    racb.DataSource = ManagersList;
-        //    racb.DataBind();
-        //}
     }
 
     /// <summary>
@@ -130,29 +119,15 @@ public partial class GridToDatatable : System.Web.UI.Page
         RadGrid2.DataBind();
     }
 
-    protected void RadGrid1_PreRender(object sender, EventArgs e)
-    {
-        /*
-         * Code for making all the Cells in the RadGrid, editable.
-         */
-        //if (!IsPostBack)
-        //{
-        //    for (int i = 0; i < RadGrid1.PageSize; i++)
-        //    {
-        //        RadGrid1.EditIndexes.Add(i);
-        //        RadGrid1.MasterTableView.EditMode = GridEditMode.InPlace;
-        //        RadGrid1.Rebind();
-        //    }
-        //}
-    }
 
-    protected void RadGrid1_ItemCommand(object sender, GridCommandEventArgs e)
-    {
-        //GridEditableItem editedItem = (GridEditableItem)e.Item;
-    }
-
+    /// <summary>
+    /// When edit button is clicked, the RadComboBoc of the selected row is intitalised.
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     protected void RadGrid1_ItemDataBound(object sender, GridItemEventArgs e)
     {
+        // Bind AutoComplete values for Manager Column
         if (e.Item is GridEditableItem)
         {
             GridDataItem gdi = e.Item as GridDataItem;
@@ -164,6 +139,8 @@ public partial class GridToDatatable : System.Web.UI.Page
                 ManagerCB.DataSource = (from r in (Session["data"] as EmployeeDataContract).Employees
                                         select r.Name).ToList<string>();
                 ManagerCB.DataBind();
+
+                // Initialize the ComboBox with the already selected text.
                 if (Session["ManagerInLabel"] != null)
                     ManagerCB.SelectedIndex = (from i in ManagerCB.Items
                                                where i.Text == Session["ManagerInLabel"].ToString()
@@ -233,5 +210,24 @@ public partial class GridToDatatable : System.Web.UI.Page
         Session["data"] = edc;
     }
 
+
+
+
+    protected void RadGrid1_PreRender(object sender, EventArgs e)
+    {
+        /*
+         * Code for making all the Cells in the RadGrid, editable.
+         */
+        //if (!IsPostBack)
+        //{
+        //    for (int i = 0; i < RadGrid1.PageSize; i++)
+        //    {
+        //        RadGrid1.EditIndexes.Add(i);
+        //        RadGrid1.MasterTableView.EditMode = GridEditMode.InPlace;
+        //        RadGrid1.Rebind();
+        //    }
+        //}
+    }
     
+
 }
