@@ -58,6 +58,31 @@ namespace DataAccessLayer
                 {
                     SqlCommand cmd = new SqlCommand();
                     cmd.CommandText = "UpdateAllEmp";
+
+                    #region DB Table and SP
+                    //CREATE TABLE emp2(
+                    //    [Id] [int] NULL,
+                    //    [name] [varchar](15) NULL,
+                    //    [job] [varchar](15) NULL,
+                    //    [salary] [numeric](10, 0) NULL,
+                    //    [manager] [varchar](15) NULL
+                    //)
+                    //GO
+
+
+                    //CREATE PROCEDURE [dbo].[UpdateAllEmp]
+                    //(
+                    //    @Data	EmpType READONLY
+                    //)
+                    //AS
+                    //BEGIN
+                    //    INSERT INTO emp2(Id, name, job, salary, manager)
+                    //    SELECT Id, name, job, salary, manager 
+                    //    FROM @Data
+                    //END
+                    //GO
+                    #endregion
+
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@Data", EmpDT);
                     cmd.Connection = con;
