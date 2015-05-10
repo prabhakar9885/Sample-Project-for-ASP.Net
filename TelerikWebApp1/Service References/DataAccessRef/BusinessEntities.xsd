@@ -12,6 +12,7 @@
       <xs:element minOccurs="0" name="Job" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ManagerName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Salary" type="xs:double" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Employee" nillable="true" type="tns:Employee" />

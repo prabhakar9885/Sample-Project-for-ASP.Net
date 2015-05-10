@@ -23,8 +23,7 @@
     </telerik:RadAjaxManager>
     <div>
         <telerik:RadGrid ID="RadGrid1" runat="server" AutoGenerateColumns="False" OnNeedDataSource="NeedDataSource_Handler"
-            OnPreRender="" GroupPanelPosition="Top" 
-            ResolvedRenderMode="Classic" OnItemDataBound="RadGrid1_ItemDataBound" 
+            GroupPanelPosition="Top" ResolvedRenderMode="Classic" OnItemDataBound="RadGrid1_ItemDataBound" 
             OnUpdateCommand="RadGrid1_UpdateCommand" OnEditCommand="RadGrid1_EditCommand"
             OnInsertCommand="RadGrid1_InsertCommand">
             <MasterTableView EditMode="InPlace" CommandItemDisplay="Top">
@@ -32,9 +31,9 @@
                 <Columns>
                     <telerik:GridTemplateColumn DataField="Id" FilterControlAltText="Filter column column"
                         HeaderText="Id" SortExpression="Id" UniqueName="IdUnique">
-                        <EditItemTemplate>
+                        <%--<EditItemTemplate>
                             <asp:TextBox ID="IdTextBox" runat="server" Text='<%# Bind("Id") %>'></asp:TextBox>
-                        </EditItemTemplate>
+                        </EditItemTemplate>--%>
                         <ItemTemplate>
                             <asp:Label ID="IdLabel" runat="server" Text='<%# Eval("Id") %>'></asp:Label>
                         </ItemTemplate>
@@ -66,7 +65,7 @@
                             <asp:Label ID="SalaryLabel" runat="server" Text='<%# Eval("Salary") %>'></asp:Label>
                         </ItemTemplate>
                     </telerik:GridTemplateColumn>
-                    <telerik:GridTemplateColumn DataField="ManagerName" HeaderText="Manager" SortExpression="ManagerName"
+                    <%--<telerik:GridTemplateColumn DataField="ManagerName" HeaderText="Manager" SortExpression="ManagerName"
                         UniqueName="ManagerNameUnique">
                         <EditItemTemplate>
                             <asp:TextBox ID="ManagerTextBox" runat="server" Text='<%# Bind("ManagerName") %>'></asp:TextBox>
@@ -74,10 +73,11 @@
                         <ItemTemplate>
                             <asp:Label ID="ManagerLabel" runat="server" Text='<%# Eval("ManagerName") %>'></asp:Label>
                         </ItemTemplate>
-                    </telerik:GridTemplateColumn>
-                    <telerik:GridTemplateColumn UniqueName="TemplateColumn" HeaderText="Manager Edit">
+                    </telerik:GridTemplateColumn>--%>
+                    <telerik:GridTemplateColumn HeaderText="Manager" DataField="ManagerName" 
+                                UniqueName="ManagerNameUnique">
                         <ItemTemplate>
-                            <asp:Label ID="ManagerLabel2" runat="server" Text='<%# Eval("ManagerName") %>'></asp:Label>
+                            <asp:Label ID="ManagerLabel" runat="server" Text='<%# Eval("ManagerName") %>'></asp:Label>
                         </ItemTemplate>
                         <EditItemTemplate>
                             <telerik:RadComboBox runat="server" ID="ManagerRadComboBox" >
@@ -94,7 +94,10 @@
         </telerik:RadGrid>
     </div>
     <telerik:RadButton ID="ExtractToDatatable" runat="server" Text="Extract to DataTable"
-        OnClick="ExtractToDatatable_Click">
+        OnClick="ExtractToDatatable_Click" style="top: -1px; left: 0px">
+    </telerik:RadButton>
+    <telerik:RadButton ID="UpdateButton" runat="server" Text="Update In DB" 
+        onclick="UpdateButton_Click">
     </telerik:RadButton>
     <label id="MsgLabel" runat="server" ></label>
     <div>
