@@ -26,6 +26,7 @@ namespace DataAccessLayer
                                 Id = row.Field<int>("empno"),
                                 Name = row.Field<string>("ename"),
                                 Job = row.Field<string>("job"),
+                                Salary = decimal.Parse( row["Salary"].ToString()),
                                 ManagerNAme = row.Field<string>("ManagerName")
                             };
                 
@@ -36,6 +37,7 @@ namespace DataAccessLayer
                     emp.Id = item.Id;
                     emp.Job = item.Job ?? "-";
                     emp.Name = item.Name ?? "-";
+                    emp.Salary = double.Parse(item.Salary.ToString() == "" ? "0" : item.Salary.ToString());
                     emp.ManagerName = item.ManagerNAme ?? "-";
                     edc.Employees.Add(emp);
                 }

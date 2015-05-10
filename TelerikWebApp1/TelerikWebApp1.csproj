@@ -159,6 +159,9 @@
     <Content Include="Workspace\EmployeeServiceConsumer\EmployeeDetails.aspx" />
     <Content Include="Workspace\EmployeeServiceConsumer\FileUpload.aspx" />
     <Content Include="Workspace\Telerik\RadAsyncUpload\RadAsyncUploadDemo_1.aspx" />
+    <Content Include="Workspace\Telerik\RadGrid\EditMode\Edit Demo.aspx" />
+    <Content Include="Workspace\Telerik\RadGrid\EditMode\EditDemo 2.aspx" />
+    <Content Include="Workspace\Telerik\RadGrid\EditMode\GridToDatatable.aspx" />
     <Content Include="Workspace\Telerik\RadGrid\PopUps\RadWindowContent2.aspx" />
     <Content Include="Workspace\Telerik\RadControlsDemo.aspx" />
     <Content Include="Workspace\Telerik\RadGridDemo.aspx" />
@@ -308,6 +311,27 @@
     </Compile>
     <Compile Include="Workspace\Telerik\RadAsyncUpload\RadAsyncUploadDemo_1.aspx.designer.cs">
       <DependentUpon>RadAsyncUploadDemo_1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Workspace\Telerik\RadGrid\EditMode\Edit Demo.aspx.cs">
+      <DependentUpon>Edit Demo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Workspace\Telerik\RadGrid\EditMode\Edit Demo.aspx.designer.cs">
+      <DependentUpon>Edit Demo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Workspace\Telerik\RadGrid\EditMode\EditDemo 2.aspx.cs">
+      <DependentUpon>EditDemo 2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Workspace\Telerik\RadGrid\EditMode\EditDemo 2.aspx.designer.cs">
+      <DependentUpon>EditDemo 2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Workspace\Telerik\RadGrid\EditMode\GridToDatatable.aspx.cs">
+      <DependentUpon>GridToDatatable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Workspace\Telerik\RadGrid\EditMode\GridToDatatable.aspx.designer.cs">
+      <DependentUpon>GridToDatatable.aspx</DependentUpon>
     </Compile>
     <Compile Include="Workspace\Telerik\RadGrid\PopUps\RadWindowContent2.aspx.cs">
       <DependentUpon>RadWindowContent2.aspx</DependentUpon>
