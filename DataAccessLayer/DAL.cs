@@ -60,12 +60,15 @@ namespace DataAccessLayer
                     cmd.CommandText = "UpdateAllEmp";
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@Data", EmpDT);
+                    cmd.Connection = con;
+
+                    con.Open();
                     cmd.ExecuteNonQuery();
+                    con.Close();
                 }
             }
             catch (Exception e)
             {
-                
                 throw e;
             }
         }
