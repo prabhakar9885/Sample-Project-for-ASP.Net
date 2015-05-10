@@ -14,6 +14,7 @@ namespace DataAccessLayer
     {
         [DataMember]
         public List<Employee> Employees;
+        public DataTable EmployeeDT { get; set; }
     }
 
     [ServiceContract]
@@ -23,5 +24,7 @@ namespace DataAccessLayer
         EmployeeDataContract GetEmployeeData(int value);
         [OperationContract]
         DataSet GetEmployeeDataTable();
+        [OperationContract]
+        void UpdateEmpBatch(EmployeeDataContract emp);
     }
 }

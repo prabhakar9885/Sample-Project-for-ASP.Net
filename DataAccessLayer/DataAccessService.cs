@@ -66,5 +66,20 @@ namespace DataAccessLayer
             }
             return null;
         }
+
+
+        public void UpdateEmpBatch(EmployeeDataContract EmpDT)
+        {
+            DAL dal = new DAL();
+            try
+            {
+                dal.UpdateEmpBatch(EmpDT.EmployeeDT);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
     }
+
 }

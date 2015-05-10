@@ -49,5 +49,25 @@ namespace DataAccessLayer
 
             return ds;
         }
+
+        internal void UpdateEmpBatch(DataTable EmpDT)
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(ConnectionString))
+                {
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.CommandText = "UpdateAllEmp";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Data", EmpDT);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception e)
+            {
+                
+                throw e;
+            }
+        }
     }
 }
