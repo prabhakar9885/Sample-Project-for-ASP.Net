@@ -22,13 +22,14 @@
     <telerik:RadAjaxManager ID="RadAjaxManager1" runat="server">
     </telerik:RadAjaxManager>
     <div>
-        <telerik:RadGrid ID="RadGrid1" runat="server" AutoGenerateColumns="False" OnNeedDataSource="GetDataSource"
+        <telerik:RadGrid ID="RadGrid1" runat="server" AutoGenerateColumns="False" OnNeedDataSource="NeedDataSource_Handler"
             OnPreRender="RadGrid1_PreRender" GroupPanelPosition="Top" OnItemCommand="RadGrid1_ItemCommand"
-            ResolvedRenderMode="Classic" onitemdatabound="RadGrid1_ItemDataBound" 
-            onupdatecommand="RadGrid1_UpdateCommand">
-            <MasterTableView EditMode="InPlace">
+            ResolvedRenderMode="Classic" OnItemDataBound="RadGrid1_ItemDataBound" 
+            OnUpdateCommand="RadGrid1_UpdateCommand" OnEditCommand="RadGrid1_EditCommand"
+            OnInsertCommand="RadGrid1_InsertCommand">
+            <MasterTableView EditMode="InPlace" CommandItemDisplay="Top">
+                <CommandItemSettings ShowRefreshButton="False" />
                 <Columns>
-                    <telerik:GridEditCommandColumn />
                     <telerik:GridTemplateColumn DataField="Id" FilterControlAltText="Filter column column"
                         HeaderText="Id" SortExpression="Id" UniqueName="IdUnique">
                         <EditItemTemplate>
@@ -56,9 +57,8 @@
                             <asp:Label ID="JobLabel" runat="server" Text='<%# Eval("Job") %>'></asp:Label>
                         </ItemTemplate>
                     </telerik:GridTemplateColumn>
-                    <telerik:GridTemplateColumn DataField="Salary"
-                        HeaderText="Salary" SortExpression="Salary" UniqueName="SalaryUnique" 
-                        DataType="System.Double">
+                    <telerik:GridTemplateColumn DataField="Salary" HeaderText="Salary" SortExpression="Salary"
+                        UniqueName="SalaryUnique" DataType="System.Double">
                         <EditItemTemplate>
                             <asp:TextBox ID="SalaryTextBox" runat="server" Text='<%# Bind("Salary") %>'></asp:TextBox>
                         </EditItemTemplate>
@@ -69,15 +69,22 @@
                     <telerik:GridTemplateColumn DataField="ManagerName" HeaderText="Manager" SortExpression="ManagerName"
                         UniqueName="ManagerNameUnique">
                         <EditItemTemplate>
-                            <%--<telerik:RadAutoCompleteBox ID="ManagerAC" runat="server" 
-                                    Text='<%# Bind("ManagerName") %>'>
-                            </telerik:RadAutoCompleteBox>--%>
                             <asp:TextBox ID="ManagerTextBox" runat="server" Text='<%# Bind("ManagerName") %>'></asp:TextBox>
                         </EditItemTemplate>
                         <ItemTemplate>
                             <asp:Label ID="ManagerLabel" runat="server" Text='<%# Eval("ManagerName") %>'></asp:Label>
                         </ItemTemplate>
                     </telerik:GridTemplateColumn>
+                    <telerik:GridTemplateColumn UniqueName="TemplateColumn" HeaderText="Manager Edit">
+                        <ItemTemplate>
+                            <asp:Label ID="ManagerLabel2" runat="server" Text='<%# Eval("ManagerName") %>'></asp:Label>
+                        </ItemTemplate>
+                        <EditItemTemplate>
+                            <telerik:RadComboBox runat="server" ID="ManagerRadComboBox" >
+                            </telerik:RadComboBox>
+                        </EditItemTemplate>
+                    </telerik:GridTemplateColumn>
+                    <telerik:GridEditCommandColumn />
                 </Columns>
                 <EditFormSettings>
                     <EditColumn UniqueName="EditCommandColumn1" FilterControlAltText="Filter EditCommandColumn1 column">
@@ -89,8 +96,9 @@
     <telerik:RadButton ID="ExtractToDatatable" runat="server" Text="Extract to DataTable"
         OnClick="ExtractToDatatable_Click">
     </telerik:RadButton>
+    <label id="MsgLabel" runat="server" ></label>
     <div>
-        <telerik:RadGrid ID="RadGrid2" runat="server" >
+        <telerik:RadGrid ID="RadGrid2" runat="server">
             <MasterTableView AutoGenerateColumns="true">
             </MasterTableView>
         </telerik:RadGrid>
