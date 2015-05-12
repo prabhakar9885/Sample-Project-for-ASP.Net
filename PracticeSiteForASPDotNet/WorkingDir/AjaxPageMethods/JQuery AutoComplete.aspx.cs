@@ -10,6 +10,10 @@ using System.Configuration;
 
 namespace PracticeSiteForASPDotNet.WorkingDir.AjaxPageMethods
 {
+
+    /*
+     * Reference: http://dotnetmentors.com/aspnet/jquery-autocomplete-by-example.aspx
+     */
     public partial class JQuery_AutoComplete : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
