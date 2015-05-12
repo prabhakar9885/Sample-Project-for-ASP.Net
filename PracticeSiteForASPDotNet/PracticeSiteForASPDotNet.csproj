@@ -73,6 +73,7 @@
     <Content Include="WorkingDir\AjaxPageMethods\AjaxPageMethod_1.aspx" />
     <Content Include="WorkingDir\AjaxPageMethods\AjaxPageMethod_2.aspx" />
     <Content Include="WorkingDir\AjaxPageMethods\Default.aspx" />
+    <Content Include="WorkingDir\AjaxPageMethods\JQuery AutoComplete.aspx" />
     <Content Include="WorkingDir\GeneralErrors\RegisterForEventValidation.aspx" />
     <Content Include="WorkingDir\Important\UploadAndDisplayPDF.aspx" />
     <Content Include="WorkingDir\Important\GridWithItemTemplate.aspx" />
@@ -168,6 +169,13 @@
     </Compile>
     <Compile Include="WorkingDir\AjaxPageMethods\AjaxPageMethod_2.aspx.designer.cs">
       <DependentUpon>AjaxPageMethod_2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkingDir\AjaxPageMethods\JQuery AutoComplete.aspx.cs">
+      <DependentUpon>JQuery AutoComplete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkingDir\AjaxPageMethods\JQuery AutoComplete.aspx.designer.cs">
+      <DependentUpon>JQuery AutoComplete.aspx</DependentUpon>
     </Compile>
     <Compile Include="WorkingDir\GeneralErrors\RegisterForEventValidation.aspx.cs">
       <DependentUpon>RegisterForEventValidation.aspx</DependentUpon>
