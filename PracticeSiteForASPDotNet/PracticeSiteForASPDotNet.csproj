@@ -74,6 +74,7 @@
     <Content Include="WorkingDir\AjaxPageMethods\AjaxPageMethod_2.aspx" />
     <Content Include="WorkingDir\AjaxPageMethods\Default.aspx" />
     <Content Include="WorkingDir\AjaxPageMethods\JQuery AutoComplete.aspx" />
+    <Content Include="WorkingDir\ContentPlaceHolder\Page1.aspx" />
     <Content Include="WorkingDir\GeneralErrors\RegisterForEventValidation.aspx" />
     <Content Include="WorkingDir\Important\UploadAndDisplayPDF.aspx" />
     <Content Include="WorkingDir\Important\GridWithItemTemplate.aspx" />
@@ -96,6 +97,7 @@
     <None Include="Service References\DataAccessRef\service2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="WorkingDir\ContentPlaceHolder\Demo.Master" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="About.aspx.cs">
@@ -176,6 +178,20 @@
     </Compile>
     <Compile Include="WorkingDir\AjaxPageMethods\JQuery AutoComplete.aspx.designer.cs">
       <DependentUpon>JQuery AutoComplete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkingDir\ContentPlaceHolder\Demo.Master.cs">
+      <DependentUpon>Demo.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkingDir\ContentPlaceHolder\Demo.Master.designer.cs">
+      <DependentUpon>Demo.Master</DependentUpon>
+    </Compile>
+    <Compile Include="WorkingDir\ContentPlaceHolder\Page1.aspx.cs">
+      <DependentUpon>Page1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkingDir\ContentPlaceHolder\Page1.aspx.designer.cs">
+      <DependentUpon>Page1.aspx</DependentUpon>
     </Compile>
     <Compile Include="WorkingDir\GeneralErrors\RegisterForEventValidation.aspx.cs">
       <DependentUpon>RegisterForEventValidation.aspx</DependentUpon>
