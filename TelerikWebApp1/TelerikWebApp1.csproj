@@ -153,6 +153,7 @@
     <Content Include="Workspace\AjaxPageMethods\AjaxPageMethod_2.aspx" />
     <Content Include="Workspace\AjaxPageMethods\Default.aspx" />
     <Content Include="Workspace\Categories\Electronics\PageInElectronicsFloder.aspx" />
+    <Content Include="Workspace\DataGrid\GridViewWithSqlDataSourceInAspx.aspx" />
     <Content Include="Workspace\Data\Countries\Countries.xml" />
     <Content Include="Workspace\EmployeeServiceConsumer\Buttons.aspx" />
     <Content Include="Workspace\EmployeeServiceConsumer\DropDownList.aspx" />
@@ -162,6 +163,7 @@
     <Content Include="Workspace\Telerik\RadGrid\EditMode\Edit Demo.aspx" />
     <Content Include="Workspace\Telerik\RadGrid\EditMode\EditDemo 2.aspx" />
     <Content Include="Workspace\Telerik\RadGrid\EditMode\GridToDatatable.aspx" />
+    <Content Include="Workspace\Telerik\RadGrid\EditMode\InsertEditDeleteGrid.aspx" />
     <Content Include="Workspace\Telerik\RadGrid\PopUps\RadWindowContent2.aspx" />
     <Content Include="Workspace\Telerik\RadControlsDemo.aspx" />
     <Content Include="Workspace\Telerik\RadGridDemo.aspx" />
@@ -277,6 +279,13 @@
     <Compile Include="Workspace\Categories\Electronics\PageInElectronicsFloder.aspx.designer.cs">
       <DependentUpon>PageInElectronicsFloder.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Workspace\DataGrid\GridViewWithSqlDataSourceInAspx.aspx.cs">
+      <DependentUpon>GridViewWithSqlDataSourceInAspx.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Workspace\DataGrid\GridViewWithSqlDataSourceInAspx.aspx.designer.cs">
+      <DependentUpon>GridViewWithSqlDataSourceInAspx.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Workspace\EmployeeServiceConsumer\Buttons.aspx.cs">
       <DependentUpon>Buttons.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -332,6 +341,13 @@
     </Compile>
     <Compile Include="Workspace\Telerik\RadGrid\EditMode\GridToDatatable.aspx.designer.cs">
       <DependentUpon>GridToDatatable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Workspace\Telerik\RadGrid\EditMode\InsertEditDeleteGrid.aspx.cs">
+      <DependentUpon>InsertEditDeleteGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Workspace\Telerik\RadGrid\EditMode\InsertEditDeleteGrid.aspx.designer.cs">
+      <DependentUpon>InsertEditDeleteGrid.aspx</DependentUpon>
     </Compile>
     <Compile Include="Workspace\Telerik\RadGrid\PopUps\RadWindowContent2.aspx.cs">
       <DependentUpon>RadWindowContent2.aspx</DependentUpon>
