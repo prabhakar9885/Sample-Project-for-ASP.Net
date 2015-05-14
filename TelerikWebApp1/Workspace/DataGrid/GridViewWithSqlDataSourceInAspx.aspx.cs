@@ -8,6 +8,9 @@ using System.Drawing;
 
 namespace TelerikWebApp1.Workspace.DataGrid
 {
+    /// <summary>
+    /// Source: http://www.aspdotnet-suresh.com/2011/02/normal-0-false-false-false-en-us-x-none.html
+    /// </summary>
     public partial class GridViewWithSqlDataSourceInAspx : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
