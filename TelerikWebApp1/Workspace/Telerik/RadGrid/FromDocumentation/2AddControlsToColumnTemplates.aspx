@@ -25,7 +25,7 @@
             <ClientSettings>
                 <Scrolling AllowScroll="True" UseStaticHeaders="True" />
             </ClientSettings>
-            <MasterTableView AllowPaging="True" AutoGenerateColumns="False"
+            <MasterTableView AutoGenerateColumns="False"
                 DataKeyNames="OrderID" DataSourceID="SqlDataSource1">
                 <CommandItemSettings ShowRefreshButton="False" />
                 <Columns>
@@ -59,7 +59,7 @@
             </MasterTableView>
         </telerik:RadGrid>
 
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:NorthwindConnectionString %>"
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:NORTHWINDConnectionString2 %>"
             SelectCommand="SELECT [OrderID], [CustomerID], [EmployeeID], [OrderDate] FROM [Orders]"
             UpdateCommand="UPDATE       Orders
 SET                EmployeeID = @EmployeeID, CustomerID = @CustomerID, OrderDate = @OrderDate 
