@@ -170,6 +170,7 @@
     <Content Include="Workspace\Telerik\RadGridDemo.aspx" />
     <Content Include="Workspace\Telerik\RadGrid\Project\AddnewEditDelete.aspx" />
     <Content Include="Workspace\Telerik\RadGrid\Project\DropDownInGrid.aspx" />
+    <Content Include="Workspace\Telerik\RadGrid\Project\DynamicGridWithAddEditDelete.aspx" />
     <Content Include="Workspace\Telerik\RadGrid\RadGridDemo2.aspx" />
     <Content Include="Workspace\Telerik\RadGrid\PopUps\RadWindowContent.aspx" />
     <Content Include="Workspace\Telerik\TelerikControlsDemo.aspx" />
@@ -387,6 +388,13 @@
     <Compile Include="Workspace\Telerik\RadGrid\Project\DropDownInGrid.aspx.designer.cs">
       <DependentUpon>DropDownInGrid.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Workspace\Telerik\RadGrid\Project\DynamicGridWithAddEditDelete.aspx.cs">
+      <DependentUpon>DynamicGridWithAddEditDelete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Workspace\Telerik\RadGrid\Project\DynamicGridWithAddEditDelete.aspx.designer.cs">
+      <DependentUpon>DynamicGridWithAddEditDelete.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Workspace\Telerik\RadGrid\RadGridDemo2.aspx.cs">
       <DependentUpon>RadGridDemo2.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -476,7 +484,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>49573</DevelopmentServerPort>
+          <DevelopmentServerPort>3068</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>
@@ -487,7 +495,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
+      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
