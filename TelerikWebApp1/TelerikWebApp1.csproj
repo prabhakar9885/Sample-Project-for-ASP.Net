@@ -159,6 +159,7 @@
     <Content Include="Workspace\EmployeeServiceConsumer\DropDownList.aspx" />
     <Content Include="Workspace\EmployeeServiceConsumer\EmployeeDetails.aspx" />
     <Content Include="Workspace\EmployeeServiceConsumer\FileUpload.aspx" />
+    <Content Include="Workspace\SQL\NorthWind.sql" />
     <Content Include="Workspace\Telerik\RadAsyncUpload\RadAsyncUploadDemo_1.aspx" />
     <Content Include="Workspace\Telerik\RadGrid\EditMode\Edit Demo.aspx" />
     <Content Include="Workspace\Telerik\RadGrid\EditMode\EditDemo 2.aspx" />
@@ -486,7 +487,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
+      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
