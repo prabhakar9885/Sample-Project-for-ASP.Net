@@ -163,9 +163,6 @@
     <Content Include="Workspace\Telerik\RadGrid\EditMode\Edit Demo.aspx" />
     <Content Include="Workspace\Telerik\RadGrid\EditMode\EditDemo 2.aspx" />
     <Content Include="Workspace\Telerik\RadGrid\EditMode\GridToDatatable.aspx" />
-    <Content Include="Workspace\Telerik\RadGrid\EditMode\UploadFileInPopUp\Default.aspx" />
-    <Content Include="Workspace\Telerik\RadGrid\EditMode\UploadFileInPopUp\FileUploader.aspx" />
-    <Content Include="Workspace\Telerik\RadGrid\EditMode\UploadFileInPopUp\GridViewForUploadedFile.aspx" />
     <Content Include="Workspace\Telerik\RadGrid\FromDocumentation\2AddControlsToColumnTemplates.aspx" />
     <Content Include="Workspace\Telerik\RadGrid\PopUps\RadWindowContent2.aspx" />
     <Content Include="Workspace\Telerik\RadControlsDemo.aspx" />
@@ -180,7 +177,6 @@
     <None Include="Service References\DataAccessRef\service2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <Content Include="Workspace\Telerik\RadGrid\EditMode\UploadFileInPopUp\Site1.Master" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.aspx" />
@@ -348,34 +344,6 @@
     <Compile Include="Workspace\Telerik\RadGrid\EditMode\GridToDatatable.aspx.designer.cs">
       <DependentUpon>GridToDatatable.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Workspace\Telerik\RadGrid\EditMode\UploadFileInPopUp\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Workspace\Telerik\RadGrid\EditMode\UploadFileInPopUp\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Workspace\Telerik\RadGrid\EditMode\UploadFileInPopUp\FileUploader.aspx.cs">
-      <DependentUpon>FileUploader.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Workspace\Telerik\RadGrid\EditMode\UploadFileInPopUp\FileUploader.aspx.designer.cs">
-      <DependentUpon>FileUploader.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Workspace\Telerik\RadGrid\EditMode\UploadFileInPopUp\GridViewForUploadedFile.aspx.cs">
-      <DependentUpon>GridViewForUploadedFile.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Workspace\Telerik\RadGrid\EditMode\UploadFileInPopUp\GridViewForUploadedFile.aspx.designer.cs">
-      <DependentUpon>GridViewForUploadedFile.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Workspace\Telerik\RadGrid\EditMode\UploadFileInPopUp\Site1.Master.cs">
-      <DependentUpon>Site1.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Workspace\Telerik\RadGrid\EditMode\UploadFileInPopUp\Site1.Master.designer.cs">
-      <DependentUpon>Site1.Master</DependentUpon>
-    </Compile>
     <Compile Include="Workspace\Telerik\RadGrid\FromDocumentation\2AddControlsToColumnTemplates.aspx.cs">
       <DependentUpon>2AddControlsToColumnTemplates.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -518,7 +486,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
+      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
