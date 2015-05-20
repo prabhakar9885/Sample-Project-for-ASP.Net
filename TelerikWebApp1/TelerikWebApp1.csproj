@@ -171,6 +171,7 @@
     <Content Include="Workspace\Telerik\RadGrid\Project\AddnewEditDelete.aspx" />
     <Content Include="Workspace\Telerik\RadGrid\Project\DropDownInGrid.aspx" />
     <Content Include="Workspace\Telerik\RadGrid\Project\DynamicGridWithAddEditDelete.aspx" />
+    <Content Include="Workspace\Telerik\RadGrid\Project\ItemCommandDemo.aspx" />
     <Content Include="Workspace\Telerik\RadGrid\RadGridDemo2.aspx" />
     <Content Include="Workspace\Telerik\RadGrid\PopUps\RadWindowContent.aspx" />
     <Content Include="Workspace\Telerik\TelerikControlsDemo.aspx" />
@@ -394,6 +395,13 @@
     </Compile>
     <Compile Include="Workspace\Telerik\RadGrid\Project\DynamicGridWithAddEditDelete.aspx.designer.cs">
       <DependentUpon>DynamicGridWithAddEditDelete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Workspace\Telerik\RadGrid\Project\ItemCommandDemo.aspx.cs">
+      <DependentUpon>ItemCommandDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Workspace\Telerik\RadGrid\Project\ItemCommandDemo.aspx.designer.cs">
+      <DependentUpon>ItemCommandDemo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Workspace\Telerik\RadGrid\RadGridDemo2.aspx.cs">
       <DependentUpon>RadGridDemo2.aspx</DependentUpon>
