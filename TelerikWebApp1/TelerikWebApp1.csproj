@@ -152,6 +152,7 @@
     <Content Include="Workspace\AjaxPageMethods\AjaxPageMethod_1.aspx" />
     <Content Include="Workspace\AjaxPageMethods\AjaxPageMethod_2.aspx" />
     <Content Include="Workspace\AjaxPageMethods\Default.aspx" />
+    <Content Include="Workspace\Ajax\LoadingPannel.aspx" />
     <Content Include="Workspace\Categories\Electronics\PageInElectronicsFloder.aspx" />
     <Content Include="Workspace\DataGrid\GridViewWithSqlDataSourceInAspx.aspx" />
     <Content Include="Workspace\Data\Countries\Countries.xml" />
@@ -276,6 +277,13 @@
     <Compile Include="Workspace\AjaxPageMethods\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Workspace\Ajax\LoadingPannel.aspx.cs">
+      <DependentUpon>LoadingPannel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Workspace\Ajax\LoadingPannel.aspx.designer.cs">
+      <DependentUpon>LoadingPannel.aspx</DependentUpon>
     </Compile>
     <Compile Include="Workspace\Categories\Electronics\PageInElectronicsFloder.aspx.cs">
       <DependentUpon>PageInElectronicsFloder.aspx</DependentUpon>
