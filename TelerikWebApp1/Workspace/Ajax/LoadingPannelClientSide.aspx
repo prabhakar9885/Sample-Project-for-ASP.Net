@@ -85,7 +85,10 @@
         <ClientEvents OnRequestStart="RequestStart" OnResponseEnd="ResponseEnd" />
     </telerik:RadAjaxManager>
 
-    <telerik:RadAjaxLoadingPanel ID="RadAjaxLoadingPanel1" runat="server" Skin="Default">
+    <telerik:RadAjaxLoadingPanel ID="RadAjaxLoadingPanel1" runat="server" Skin="Default" >
+        <%--<div>
+            <asp:Image ID="Image1" runat="server" ImageUrl="/images/ajax-loader.gif" AlternateText="loading"></asp:Image>
+        </div>--%>
     </telerik:RadAjaxLoadingPanel>
 
     <telerik:RadAjaxPanel ID="RadAjaxPanel1" runat="server">

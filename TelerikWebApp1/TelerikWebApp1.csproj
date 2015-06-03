@@ -137,6 +137,7 @@
     <Content Include="App_Data\RadCaptcha\X.wav" />
     <Content Include="App_Data\RadCaptcha\Y.wav" />
     <Content Include="App_Data\RadCaptcha\Z.wav" />
+    <Content Include="images\ajax-loader.gif" />
     <Content Include="MasterPage.Master" />
     <Content Include="MasterPageSingleMenu.Master" />
     <None Include="Properties\DataSources\DataAccessLayer.EmployeeDataContract.datasource" />
