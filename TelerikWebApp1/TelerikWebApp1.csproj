@@ -153,6 +153,7 @@
     <Content Include="Workspace\AjaxPageMethods\AjaxPageMethod_2.aspx" />
     <Content Include="Workspace\AjaxPageMethods\Default.aspx" />
     <Content Include="Workspace\Ajax\LoadingPannel.aspx" />
+    <Content Include="Workspace\Ajax\LoadingPannelClientSide.aspx" />
     <Content Include="Workspace\Categories\Electronics\PageInElectronicsFloder.aspx" />
     <Content Include="Workspace\DataGrid\GridViewWithSqlDataSourceInAspx.aspx" />
     <Content Include="Workspace\Data\Countries\Countries.xml" />
@@ -284,6 +285,13 @@
     </Compile>
     <Compile Include="Workspace\Ajax\LoadingPannel.aspx.designer.cs">
       <DependentUpon>LoadingPannel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Workspace\Ajax\LoadingPannelClientSide.aspx.cs">
+      <DependentUpon>LoadingPannelClientSide.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Workspace\Ajax\LoadingPannelClientSide.aspx.designer.cs">
+      <DependentUpon>LoadingPannelClientSide.aspx</DependentUpon>
     </Compile>
     <Compile Include="Workspace\Categories\Electronics\PageInElectronicsFloder.aspx.cs">
       <DependentUpon>PageInElectronicsFloder.aspx</DependentUpon>
@@ -511,7 +519,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
+      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
