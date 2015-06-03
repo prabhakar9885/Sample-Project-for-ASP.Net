@@ -24,4 +24,14 @@ public partial class LoadingPannelClientSide : System.Web.UI.Page
         SqlDataSource2.SelectParameters["ProductID"].DefaultValue = RadComboBox1.SelectedValue;
         RadGrid1.Rebind();
     }
+
+    protected void RadAjaxManager1_AjaxRequest(object sender, Telerik.Web.UI.AjaxRequestEventArgs e)
+    {
+        if (e.Argument == "InitialPageLoad")
+        {
+            //simulate longer page load        
+            System.Threading.Thread.Sleep(2000);
+            RadAjaxLoadingPanel1.Visible = true;
+        }
+    }
 }

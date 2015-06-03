@@ -22,9 +22,21 @@
     </script>
     <telerik:RadCodeBlock ID="RadCodeBlock1" runat="server">
         <script type="text/javascript">
+
+            function pageLoad(sender, eventArgs) {
+                if (!eventArgs.get_isPartialLoad()) {
+                    $find("<%= RadAjaxManager1.ClientID %>").ajaxRequest("InitialPageLoad");
+                }
+            }      
+
+
             var currentLoadingPanel = null;
             var currentUpdatedControl = null;
             function RequestStart(sender, args) {
+                
+                // Before reloading the Grid, slide it up.
+                $("#<%= RadGrid1.ClientID %>").slideUp("slow", null);
+
                 currentLoadingPanel = $find("<%= RadAjaxLoadingPanel1.ClientID %>");
 
                 if (args.get_eventTarget() == "<%= RadComboBox1.UniqueID %>") {
@@ -36,20 +48,33 @@
                 //show the loading panel over the updated control
                 currentLoadingPanel.show(currentUpdatedControl);
             }
+
             function ResponseEnd() {
+                
+                // When the response arrives at the Client, the Grid will become visible(no longer slided up). So, slide it up, without displaying the Grid.
+                $("#<%= RadGrid1.ClientID %>").slideUp(1, null);
+
                 //hide the loading panel and clean up the global variables
                 if (currentLoadingPanel != null)
                     currentLoadingPanel.hide(currentUpdatedControl);
                 currentUpdatedControl = null;
                 currentLoadingPanel = null;
+
+                //After hiding the loading pannel, slide-down the Grid.
+                $("#<%= RadGrid1.ClientID %>").slideDown("slow", null);
             }
         </script>
     </telerik:RadCodeBlock>
     <telerik:RadSkinManager ID="RadSkinManager1" runat="server">
     </telerik:RadSkinManager>
 
-    <telerik:RadAjaxManager ID="RadAjaxManager1" runat="server">
+    <telerik:RadAjaxManager ID="RadAjaxManager1" runat="server" OnAjaxRequest="RadAjaxManager1_AjaxRequest">
         <AjaxSettings>
+            <telerik:AjaxSetting AjaxControlID="RadAjaxManager1">
+                <UpdatedControls>
+                    <telerik:AjaxUpdatedControl ControlID="RadAjaxPanel1" LoadingPanelID="RadAjaxLoadingPanel1" />
+                </UpdatedControls>
+            </telerik:AjaxSetting>
             <telerik:AjaxSetting AjaxControlID="RadComboBox1">
                 <UpdatedControls>
                     <telerik:AjaxUpdatedControl ControlID="RadComboBox1" />
