@@ -47,8 +47,9 @@
                                 { command: [ "edit", "destroy"] }
                                ],
                     scrollable: false,
-                    pageable: true,
+                    selectable: "multiple cell",
                     sortable: true,
+                    pageable: true,
                     groupable: true,
                     filterable: true,
                     editable: "inline"
