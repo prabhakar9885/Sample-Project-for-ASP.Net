@@ -17,6 +17,7 @@
         <div id="grid1">
         </div>
         <%--http://docs.telerik.com/kendo-ui/web/grid/introduction--%>
+        <%--http://docs.telerik.com/kendo-ui/web/grid/walkthrough--%>
         <table id="grid2">
             <colgroup>
                 <col />
@@ -89,6 +90,8 @@
 
         <div id="grid4"></div>
 
+        <div id="grid5"></div>
+
         <script type="text/javascript">
 
             //        Grid 1
@@ -132,9 +135,9 @@
 
                 //        Grid 4
                 var people = [{ firstName: "John 1",
-                                    lastName: "Smith",
-                                    email: "john.smith@telerik.com"
-                                },
+                    lastName: "Smith",
+                    email: "john.smith@telerik.com"
+                },
                                { firstName: "Jane 2",
                                    lastName: "Smith",
                                    email: "jane.smith@telerik.com"
@@ -156,10 +159,53 @@
                                    email: "cindy.jones@telerik.com"
                                }];
 
-            $("#grid4").kendoGrid({
+                $("#grid4").kendoGrid({
                     height: 200,
                     dataSource: people,
                     selectable: "row"
+                });
+
+                //      Grid 5
+                var ds = new kendo.data.DataSource({ 
+                    schema: {
+                        model: {
+                            id: "firstName",
+                            fields: {
+                                firstName: {
+                                    editable: false,
+                                    nullable: true
+                                },
+                                lastName: {
+                                    validation: {
+                                        required: true
+                                    }
+                                },
+                                email: {
+                                    defaultValue: "xyz@gmail.com",
+                                    validation: {
+                                        required: true
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+                $("#grid5").kendoGrid({
+                    height: 200,
+                    toolbar: ["create", "save", "cancel"],
+                    editable: { 
+                         update: true//,
+                         //destroy: false
+                      },
+                    selectable: "row",
+                    dataSource: people, 
+                    columns: [
+                        {field:"firstName", title:"First Name"},
+                        {field:"lastName", title:"Last Name"},
+                        {field:"email", title:"Email"},
+                        {
+                            command: "destroy"
+                        }]
                 });
             });
 
