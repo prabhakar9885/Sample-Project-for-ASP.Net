@@ -14,6 +14,9 @@
 <body>
     <form id="form1" runat="server">
     <div>
+
+    <%--http://docs.telerik.com/kendo-ui/web/multiselect/overview--%>
+
         <select id="multiselect1" style="width: 450px;">
         </select>
         <input type="button" value="Show Value part" id="button1"/>
