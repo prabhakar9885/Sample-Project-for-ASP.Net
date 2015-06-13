@@ -203,6 +203,7 @@
     <Content Include="Workspace\Telerik\RadGrid\Project\ItemCommandDemo.aspx" />
     <Content Include="Workspace\Telerik\RadGrid\RadGridDemo2.aspx" />
     <Content Include="Workspace\Telerik\RadGrid\PopUps\RadWindowContent.aspx" />
+    <Content Include="Workspace\Telerik\RadWindowAndEnterKey.aspx" />
     <Content Include="Workspace\Telerik\TelerikControlsDemo.aspx" />
     <Content Include="Workspace\Telerik\Webinar\FilterDemo.aspx" />
     <Content Include="Workspace\Telerik\Webinar\PagingDemo.aspx" />
@@ -509,6 +510,13 @@
     <Compile Include="Workspace\Telerik\RadGrid\PopUps\RadWindowContent.aspx.designer.cs">
       <DependentUpon>RadWindowContent.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Workspace\Telerik\RadWindowAndEnterKey.aspx.cs">
+      <DependentUpon>RadWindowAndEnterKey.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Workspace\Telerik\RadWindowAndEnterKey.aspx.designer.cs">
+      <DependentUpon>RadWindowAndEnterKey.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Workspace\Telerik\TelerikControlsDemo.aspx.cs">
       <DependentUpon>TelerikControlsDemo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -595,7 +603,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
+      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
